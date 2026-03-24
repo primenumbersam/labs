@@ -1,0 +1,74 @@
+[
+  {
+    "repo": "lab-google",
+    "url": "https://sites.gitsam.com",
+    "title": "Google Tool UseCase",
+    "description": "구글도구 실습모음집",
+    "tools": "Gemini, Google Apps, Google Labs 등",
+    "target-audience": "구글 생태계 활용 생산성 극대화 희망자",
+    "desired-impact": "소비자용 구글 도구들을 연결한 생산성 극대화"
+  },
+  {
+    "repo": "lab-cms",
+    "url": "https://decapcms-hugo-docsy.netlify.app/",
+    "title": "Lightweight Free CMS",
+    "description": "초경량 무료 CMS",
+    "tools": "DecapCMS, Hugo, Netlify",
+    "target-audience": "경량 Headless CMS에 Head를 붙여 무료로 쓰고 싶은 사용자",
+    "desired-impact": "복잡한 백엔드 없는 콘텐츠 관리체계 구축 및 배포 자동화"
+  },
+  {
+    "repo": "lab-ecommerce",
+    "url": "https://gitsam.com/lab-ecommerce",
+    "title": "E-commerce AD Factory",
+    "description": "브랜드상품 홍보콘텐츠 반자동생산 결과물모음집",
+    "tools": "HTML, CSS, JS, JSON",
+    "target-audience": "내 브랜드 LAROE",
+    "desired-impact": "상품홍보물 생산 반자동화를 통한 마케팅 효율성 극대화"
+  },
+  {
+    "repo": "lab-pdf-bookcase",
+    "url": "https://gitsam.com/lab-pdf-bookcase",
+    "title": "3D PDF Bookcase",
+    "description": "온라인 flip pdf 3D 책장",
+    "tools": "Python, JS, CSV",
+    "target-audience": "전자책 작가 지망생",
+    "desired-impact": "전자책 포트폴리오를 시각화한 무료 사이트 구축"
+  },
+  {
+    "repo": "lab-streamlit-altair",
+    "url": "https://primenumbersam-altair.streamlit.app",
+    "title": "Streamlit Quickstart",
+    "description": "파이썬 altair 시각화 라이브러리 실습",
+    "tools": "Python, Streamlit, Altair",
+    "target-audience": "데이터 시각화 학습자",
+    "desired-impact": "선언적 시각화 도구로 상호작용 대시보드 구현"
+  },
+  {
+    "repo": "lab-streamlit-finance",
+    "url": "https://primenumbersam-finance.streamlit.app",
+    "title": "Financial Investment DashBoard",
+    "description": "주요 주식 가격 비교 대시보드",
+    "tools": "Python, yfinance, Streamlit",
+    "target-audience": "재테크 초보",
+    "desired-impact": "주요 주식 일간 가격 지표 변화 동향"
+  },
+  {
+    "repo": "lab-streamlit-macro",
+    "url": "https://primenumbersam-macro.streamlit.app",
+    "title": "Macro Indicator Dashboard",
+    "description": "주요국별 주요 거시 지표 장기간 비교 대시보드",
+    "tools": "Python, FRED, Streamlit",
+    "target-audience": "글로벌 거시경제 지표 분석가",
+    "desired-impact": "데이터 기반 의사결정 지원"
+  },
+  {
+    "repo": "lab-streamlit-market",
+    "url": "https://primenumbersam-market.streamlit.app",
+    "title": "Market Correlation Analyzer",
+    "description": "미국-한국 주요 주식 일간 동조화 분석 대시보드",
+    "tools": "Python, yfinance, Streamlit",
+    "target-audience": "한-미 증시 동조화 투자 전략 수립가",
+    "desired-impact": "시장 간 가격 상관관계 분석을 통한 차익거래 전략 도출"
+  }
+]
