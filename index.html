@@ -199,10 +199,12 @@
             <!-- Left: Stats & Info -->
             <div class="flex flex-col gap-4">
                 <div class="order-2 lg:order-1">
+                    <p>삼순동순 기술</p>
                     <h1 class="text-3xl sm:text-5xl lg:text-5xl font-black tracking-tighter uppercase leading-[1] mb-2">
                         느<span style="color: var(--bauhaus-red);">좋</span>코딩 <span
-                            style="color: var(--bauhaus-yellow);">좆</span>문<br><span
-                            style="color: var(--bauhaus-red);">좋</span>소기업 깃샘
+                            style="color: var(--bauhaus-red);">좋</span>문<br><span
+                            style="color: var(--bauhaus-red);">좋</span>소 <span
+                            style="color: var(--bauhaus-yellow);">스따럽</span>
                     </h1>
                 </div>
 
@@ -470,21 +472,22 @@
         }
 
         /* --- HUB DATA & RENDER --- */
-        const spokeData = [
-            { "repo": "lab-google", "url": "https://sites.gitsam.com", "title": "Google Tool UseCase", "description": "구글도구 실습모음집", "category": "ai", "type": "triangle", "color": "#1D3557", "image": "screenshot/screen-google.jpg" },
-            { "repo": "lab-cms", "url": "https://decapcms-hugo-docsy.netlify.app/", "title": "Lightweight Free CMS", "description": "초경량 무료 CMS", "category": "web", "type": "circle", "color": "#E63946" },
-            { "repo": "lab-ecommerce", "url": "https://gitsam.com/lab-ecommerce", "title": "E-commerce AD Factory", "description": "브랜드상품 홍보콘텐츠 반자동생산 결과물모음집", "category": "web", "type": "square", "color": "#FFB703", "image": "screenshot/screen-ecommerce.jpg" },
-            { "repo": "lab-pdf-bookcase", "url": "https://gitsam.com/lab-pdf-bookcase", "title": "3D PDF Bookcase", "description": "온라인 flip pdf 3D 책장", "category": "python", "type": "circle", "color": "#111111", "image": "screenshot/screen-pdf-bookcase.jpg" },
-            { "repo": "lab-streamlit-altair", "url": "https://primenumbersam-altair.streamlit.app", "title": "Streamlit Quickstart", "description": "파이썬 altair 시각화 라이브러리 실습", "category": "python", "type": "square", "color": "#E63946", "image": "screenshot/screen-streamlit-altair.jpg" },
-            { "repo": "lab-streamlit-finance", "url": "https://primenumbersam-finance.streamlit.app", "title": "Financial Investment DashBoard", "description": "주요 주식 가격 비교 대시보드", "category": "python", "type": "circle", "color": "#111111" },
-            { "repo": "lab-streamlit-macro", "url": "https://primenumbersam-macro.streamlit.app", "title": "Macro Indicator Dashboard", "description": "주요국별 주요 거시 지표 장기간 비교 대시보드", "category": "python", "type": "circle", "color": "#FFB703" },
-            { "repo": "lab-streamlit-market", "url": "https://primenumbersam-market.streamlit.app", "title": "Market Correlation Analyzer", "description": "미국-한국 주요 주식 일간 동조화 분석 대시보드", "category": "python", "type": "square", "color": "#1D3557" }
-        ];
+        let spokeData = [];
+
+        async function fetchData() {
+            try {
+                const response = await fetch('spoke.json');
+                spokeData = await response.json();
+                renderCards();
+            } catch (error) {
+                console.error('Error loading spoke data:', error);
+            }
+        }
 
         function renderCards(filter = 'all') {
             const grid = document.getElementById('card-grid');
             grid.innerHTML = '';
-            const filteredData = filter === 'all' ? spokeData : spokeData.filter(item => item.category === filter);
+            const filteredData = filter === 'all' ? spokeData : spokeData.filter(item => item.filter === filter);
 
             filteredData.forEach((item, index) => {
                 const card = document.createElement('div');
@@ -545,7 +548,7 @@
 
         window.onload = () => {
             initGame();
-            renderCards();
+            fetchData();
         };
     </script>
 </body>
