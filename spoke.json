@@ -52,19 +52,6 @@
     "image": "screenshot/screen-pdf-bookcase.jpg"
   },
   {
-    "repo": "lab-streamlit-start",
-    "url": "https://primenumbersam-start.streamlit.app",
-    "title": "Streamlit Quickstart",
-    "description": "파이썬 UI 포장도구 streamlit 실습",
-    "tools": "Python, Streamlit, Altair",
-    "target-audience": "데이터 시각화 학습자",
-    "desired-impact": "선언적 시각화 도구로 상호작용 대시보드 구현",
-    "filter": "python",
-    "type": "square",
-    "color": "#E63946",
-    "image": "screenshot/screen-streamlit-altair.jpg"
-  },
-  {
     "repo": "lab-streamlit-macro",
     "url": "https://primenumbersam-macro.streamlit.app",
     "title": "Macro Indicator Dashboard",
@@ -101,6 +88,19 @@
     "color": "#1D3557"
   },
   {
+    "repo": "lab-streamlit-start",
+    "url": "https://primenumbersam-lab-streamlit-start.hf.space/",
+    "title": "Streamlit Quickstart Demo",
+    "description": "파이썬 UI 포장도구 streamlit 실습",
+    "tools": "Python, Streamlit, Altair",
+    "target-audience": "데이터 시각화 학습자",
+    "desired-impact": "선언적 시각화 도구로 상호작용 대시보드 구현",
+    "filter": "python",
+    "type": "square",
+    "color": "#E63946",
+    "image": "screenshot/screen-streamlit-start.jpg"
+  }, 
+  {
     "repo": "lab-cms",
     "url": "https://decapcms-hugo-docsy.netlify.app/",
     "title": "Lightweight Free CMS",
@@ -110,7 +110,8 @@
     "desired-impact": "복잡한 백엔드 없는 콘텐츠 관리체계 구축 및 배포 자동화",
     "filter": "web",
     "type": "circle",
-    "color": "#E63946"
+    "color": "#E63946",
+    "image": "screenshot/screen-decapcms-hugo.jpg"
   },
   {
     "repo": "lab-diary",
