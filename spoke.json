@@ -28,7 +28,7 @@
   {
     "repo": "lab-ecommerce",
     "url": "https://gitsam.com/lab-ecommerce",
-    "title": "E-commerce AD Factory",
+    "title": "E-commerce AD",
     "description": "브랜드상품 홍보콘텐츠 반자동생산 결과물모음집",
     "tools": "HTML, CSS, JS, JSON",
     "target-audience": "내 브랜드 LAROE",
@@ -67,20 +67,21 @@
   {
     "repo": "lab-openbb",
     "url": "https://gitsam.com/lab-openbb",
-    "title": "KR Index Contribution Analyzer",
+    "title": "OpenBB FastAPI",
     "description": "한국 경제통계지표 구성요소 기여도 분석기",
     "tools": "python, kosis, fastapi, openbb",
     "target-audience": "실물 거시경제 지표 분석가",
     "desired-impact": "통계와 현실의 괴리 파악",
     "filter": "python",
     "type": "square",
-    "color": "#111111"
+    "color": "#111111",
+    "image": "screenshot/screen-openbb.jpg"
   },
-    {
+  {
     "repo": "lab-verify",
     "url": "https://gitsam.com/lab-verify",
     "title": "저작검증 표준",
-    "description": "주요국별 주요 거시 지표 장기간 비교 대시보드",
+    "description": "AI 활용 저작과정 검증",
     "tools": "",
     "target-audience": "",
     "desired-impact": "",
