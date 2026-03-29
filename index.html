@@ -493,8 +493,8 @@
                 const card = document.createElement('div');
                 card.className = 'bauhaus-card bauhaus-border h-full flex flex-col bg-white group';
                 let shapeHtml = '';
-                const shapeSize = 'w-7 h-7 sm:w-8 h-8';
-                if (item.type === 'circle') shapeHtml = `<div class="${shapeSize} circle" style="background-color: ${item.color}"></div>`;
+                const shapeSize = 'w-7 h-7 sm:w-8 h-8'; 
+                if (item.type === 'circle') shapeHtml = `<div class="${shapeSize} circle bauhaus-border" style="background-color: ${item.color}"></div>`;
                 else if (item.type === 'square') shapeHtml = `<div class="${shapeSize} square" style="background-color: ${item.color}"></div>`;
                 else shapeHtml = `<div class="w-0 h-0 border-l-[14px] border-l-transparent border-r-[14px] border-r-transparent border-b-[24px] border-b-black" style="border-bottom-color: ${item.color}"></div>`;
 
