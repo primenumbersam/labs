@@ -185,6 +185,79 @@
         html {
             scroll-behavior: smooth;
         }
+
+            .gemini-floating-button {
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                display: flex;
+                align-items: center;
+                padding: 12px 20px;
+                background: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(155, 114, 203, 0.3);
+                border-radius: 50px;
+                text-decoration: none;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+                z-index: 9999;
+                font-family: 'Segoe UI', Roboto, sans-serif;
+            }
+
+            .gemini-floating-button:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(155, 114, 203, 0.2);
+                border-color: rgba(155, 114, 203, 0.6);
+            }
+
+            .gemini-icon {
+                width: 28px;
+                height: 28px;
+                margin-right: 12px;
+                display: flex;
+                align-items: center;
+            }
+
+            .gemini-text {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .gemini-text .label {
+                font-size: 10px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: #666;
+                font-weight: bold;
+            }
+
+            .gemini-text .title {
+                font-size: 14px;
+                color: #1f1f1f;
+                font-weight: 600;
+                white-space: nowrap;
+            }
+
+            .gemini-text small {
+                font-weight: 400;
+                color: #4285F4;
+            }
+
+            /* 모바일 대응: 화면이 작을 때는 텍스트를 숨기고 아이콘만 보여줄 수도 있습니다. */
+            @media (max-width: 480px) {
+                .gemini-floating-button {
+                    bottom: 20px;
+                    right: 20px;
+                    padding: 12px;
+                }
+                .gemini-text {
+                    display: none;
+                    /* 텍스트 숨기기 (선택 사항) */
+                }
+                .gemini-icon {
+                    margin-right: 0;
+                }
+            }
     </style>
 </head>
 
@@ -286,20 +359,10 @@
     </main>
 
     <footer
-        class="mt-14 border-t-[4px] border-black pt-5 pb-5 text-[10px] font-black uppercase flex flex-col md:flex-row justify-between items-start md:items-end gap-8 max-w-[1400px] mx-auto">
+        class="mt-8 border-t-[4px] border-black pt-2 pb-2 text-[10px] font-black uppercase flex flex-col md:flex-row justify-center items-center gap-8 max-w-[1400px] mx-auto">
 
-        <div class="flex flex-col items-end gap-4">
-            <div class="flex gap-2">
-                <div class="w-8 h-8 sm:w-10 sm:h-10 bg-[var(--bauhaus-red)] bauhaus-border"></div>
-                <div class="w-8 h-8 sm:w-10 sm:h-10 bg-[var(--bauhaus-yellow)] bauhaus-border circle"></div>
-                <div class="w-8 h-8 sm:w-10 sm:h-10 bg-[var(--bauhaus-blue)] bauhaus-border"></div>
-            </div>
-            <p class="tracking-[0.2em] font-black bg-black text-white px-3 py-1 text-[9px]">느좋코딩 좋문 좋소기업</p>
-        </div>
-        <div>
-            <h2 class="text-xl sm:text-2xl font-black mb-2 tracking-tighter">Gitsam Lab</h2>
-            <p class="opacity-40 mt-6 font-mono">© 2026 / gitsam / KR</p>
-        </div>
+        <p class="tracking-[0.2em] font-black bg-black text-white px-3 py-1 text-[10px]">느좋코딩 좋문 좋소기업</p>
+        <a href="https://gitsam.com" target="_blank" rel="noopener noreferrer" class="text-xl sm:text-2xl font-black tracking-tighter block hover:text-[var(--bauhaus-red)]">Gitsam Lab</a>
     </footer>
 
     <script>
@@ -551,6 +614,26 @@
             fetchData();
         };
     </script>
+
+    <!-- "System Prompted LLM (ft. Gemini)" 플로팅 버튼 -->
+    <a href="https://gemini.google.com/gem/1XuTbuj_KGr9JF_StNmKQlwlfxm0qznhM" class="gemini-floating-button" target="_blank" rel="noopener noreferrer">
+        <div class="gemini-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="url(#gemini-grad)" />
+                <defs>
+                    <linearGradient id="gemini-grad" x1="2" y1="12" x2="22" y2="12" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#4285F4" />
+                        <stop offset="50%" stop-color="#9B72CB" />
+                        <stop offset="100%" stop-color="#D96570" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        <div class="gemini-text">
+            <span class="title">느좋캐릭터 챗봇</span>
+            <span class="label">System Prompted LLM <small>(잼미니)</small></span>
+        </div>
+    </a>
 </body>
 
 </html>

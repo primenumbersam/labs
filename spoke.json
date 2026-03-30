@@ -20,7 +20,7 @@
     "tools": "Google AppSheet, Google Sheets, GTIN-13 Barcode, Mobile Camera (Scanner)",
     "target-audience": "물류 관리자, 소규모 브랜드 운영자, 1인 창업자",
     "desired-impact": "Ref(참조) 및 Dereference 수식을 활용한 실시간 상품 정보 쿼리 및 입출고 로깅 프로세스 구현. 수기 입력 오류 최소화",
-    "filter": "ai",
+    "filter": "web",
     "type": "circle",
     "color": "#111111",
     "image": "screenshot/screen-brand-appsheet.jpg"
