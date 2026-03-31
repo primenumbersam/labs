@@ -78,18 +78,6 @@
     "image": "screenshot/screen-openbb.jpg"
   },
   {
-    "repo": "lab-verify",
-    "url": "https://gitsam.com/lab-verify",
-    "title": "저작검증 표준",
-    "description": "AI 활용 저작과정 검증",
-    "tools": "",
-    "target-audience": "",
-    "desired-impact": "",
-    "filter": "ai",
-    "type": "circle",
-    "color": "#FFB703"
-  },
-  {
     "repo": "lab-math",
     "url": "https://primenumbersam-math.hf.space",
     "title": "느좋수학",
@@ -99,5 +87,17 @@
     "filter": "ai",
     "type": "triangle",
     "color": "#E63946"
+  },
+  {
+    "repo": "lab-verify",
+    "url": "https://gitsam.com/lab-verify",
+    "title": "저술검증 표준",
+    "description": "AI 활용 저술과정 검증",
+    "tools": "",
+    "target-audience": "",
+    "desired-impact": "",
+    "filter": "ai",
+    "type": "circle",
+    "color": "#FFB703"
   }
 ]
