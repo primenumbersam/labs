@@ -66,10 +66,10 @@
   },
   {
     "repo": "lab-openbb",
-    "url": "https://gitsam.com/lab-openbb",
-    "title": "Demo: Modular OpenBB FastAPI",
+    "url": "https://github.com/primenumbersam/lab-openbb",
+    "title": "Demo: OpenBB Modular FastAPI",
     "description": "Test backend configurations",
-    "tools": "python, openbb, fastapi, workspace",
+    "tools": "python, openbb workspace, fastapi",
     "target-audience": "투자모형 분석가",
     "desired-impact": "Pre-built widgets for financial data",
     "filter": "python",
