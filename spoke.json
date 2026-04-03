@@ -80,13 +80,25 @@
   {
     "repo": "lab-math",
     "url": "https://primenumbersam-math.hf.space",
-    "title": "느좋수학",
-    "description": "Ai-assisted CoT math learning and dataset",
-    "tools": "python, json, llm, gradio, huggingface",
+    "title": "Math CoT Corpus (KR)",
+    "description": "느좋수학, Ai-assisted CoT math dataset and learning",
+    "tools": "python, json, lean, llm, gradio, huggingface",
     "target-audience": "",
     "filter": "ai",
     "type": "triangle",
     "color": "#E63946"
+  },
+  {
+    "repo": "lab-diary",
+    "url": "https://gitsam.com/lab-diary",
+    "title": "AI-assisted Diary",
+    "description": "딸깍일기 어플, AI 활용 일기장 모바일 어플",
+    "tools": "firebase",
+    "target-audience": "",
+    "desired-impact": "",
+    "filter": "ai",
+    "type": "circle",
+    "color": "#FFB703"
   },
   {
     "repo": "lab-verify",
@@ -97,7 +109,7 @@
     "target-audience": "",
     "desired-impact": "",
     "filter": "ai",
-    "type": "circle",
-    "color": "#FFB703"
+    "type": "triangle",
+    "color": "#1D3557"
   }
 ]
