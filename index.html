@@ -116,6 +116,10 @@
             }
         }
 
+        .circle {
+            border-radius: 50%;
+        }
+
         .spinning .symbol {
             filter: blur(2px);
         }
@@ -568,7 +572,7 @@
                         <div class="absolute top-4 left-4 font-black text-[8px] bg-white px-1 py-0.5 border border-black z-10 uppercase tracking-tighter">0${index + 1} // ${item.repo}</div>
                     </div>
                     <div class="p-6 sm:p-8 flex flex-col flex-grow">
-                        <h3 class="text-lg sm:text-xl font-black uppercase mb-3 leading-[1.1] tracking-tighter">${item.title}</h3>
+                        <h3 class="text-lg sm:text-xl font-black mb-3 leading-[1.1] tracking-tighter">${item.title}</h3>
                         <p class="text-[11px] mb-8 flex-grow leading-relaxed font-medium opacity-60">${item.description}</p>
                         <div class="mt-auto pt-6 border-t-[2px] border-black border-opacity-10 flex items-center justify-between">
                             <a href="${item.url}" target="_blank" class="inline-flex items-center gap-2 group text-[10px] font-black uppercase tracking-widest hover:text-[var(--bauhaus-red)] transition-colors">

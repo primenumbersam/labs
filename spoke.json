@@ -21,8 +21,8 @@
     "target-audience": "물류 관리자, 소규모 브랜드 운영자, 1인 창업자",
     "desired-impact": "Ref(참조) 및 Dereference 수식을 활용한 실시간 상품 정보 쿼리 및 입출고 로깅 프로세스 구현. 수기 입력 오류 최소화",
     "filter": "web",
-    "type": "circle",
-    "color": "#111111",
+    "type": "triangle",
+    "color": "#1D3557",
     "image": "screenshot/screen-brand-appsheet.jpg"
   },
   {
@@ -34,10 +34,10 @@
     "target-audience": "내 브랜드 LAROE",
     "desired-impact": "상품홍보물 생산 반자동화를 통한 마케팅 효율성 극대화",
     "filter": "web",
-    "type": "square",
+    "type": "triangle",
     "color": "#FFB703",
     "image": "screenshot/screen-ecommerce.jpg"
-  },
+  },  
   {
     "repo": "lab-pdf-bookcase",
     "url": "https://gitsam.com/lab-pdf-bookcase",
@@ -47,8 +47,8 @@
     "target-audience": "전자책 작가 지망생",
     "desired-impact": "전자책 포트폴리오를 시각화한 무료 사이트 구축",
     "filter": "web",
-    "type": "circle",
-    "color": "#1D3557",
+    "type": "triangle",
+    "color": "#FFB703",
     "image": "screenshot/screen-pdf-bookcase.jpg"
   },
   {
@@ -67,38 +67,60 @@
   {
     "repo": "lab-openbb",
     "url": "https://github.com/primenumbersam/lab-openbb",
-    "title": "Demo: OpenBB Modular FastAPI",
+    "title": "Demo: Modular OpenBB FastAPI",
     "description": "Test backend configurations",
     "tools": "python, openbb workspace, fastapi",
     "target-audience": "투자모형 분석가",
     "desired-impact": "Pre-built widgets for financial data",
     "filter": "python",
     "type": "square",
-    "color": "#111111",
+    "color": "#E63946",
     "image": "screenshot/screen-openbb.jpg"
   },
   {
-    "repo": "lab-math",
-    "url": "https://primenumbersam-math.hf.space",
-    "title": "Math CoT Corpus (KR)",
-    "description": "느좋수학, Ai-assisted CoT math dataset and learning",
-    "tools": "python, json, lean, llm, gradio, huggingface",
+    "repo": "vibe-invest",
+    "url": "https://invest.gitsam.com",
+    "title": "RaaS Investment",
+    "description": "Portfolio Visualizer 벤치마킹",
+    "tools": "python, reflex, polars, parquet, stripe",
     "target-audience": "",
-    "filter": "ai",
-    "type": "triangle",
-    "color": "#E63946"
+    "filter": "python",
+    "type": "circle",
+    "color": "#FFB703"
+  },
+  {
+    "repo": "vibe-lms",
+    "url": "https://lms.gitsam.com",
+    "title": "SaaS LMS",
+    "description": "js, hono, markdown, stripe",
+    "tools": "js, hono, markdown, stripe",
+    "target-audience": "",
+    "filter": "web",
+    "type": "circle",
+    "color": "#FFB703"
   },
   {
     "repo": "lab-diary",
     "url": "https://gitsam.com/lab-diary",
-    "title": "AI-assisted Diary",
-    "description": "딸깍일기 어플, AI 활용 일기장 모바일 어플",
+    "title": "딸깍일기 어플",
+    "description": "AI 활용 일기장 모바일 어플",
     "tools": "firebase",
     "target-audience": "",
     "desired-impact": "",
     "filter": "ai",
-    "type": "circle",
+    "type": "square",
     "color": "#FFB703"
+  },
+  {
+    "repo": "lab-math",
+    "url": "https://primenumbersam-math.hf.space",
+    "title": "느좋수학 데이터셋",
+    "description": "Korean Math CoT Corpus",
+    "tools": "python, json, lean, llm, gradio, huggingface",
+    "target-audience": "",
+    "filter": "ai",
+    "type": "triangle",
+    "color": "#1D3557"
   },
   {
     "repo": "lab-verify",
