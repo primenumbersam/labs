@@ -89,38 +89,27 @@
     "color": "#FFB703"
   },
   {
-    "repo": "vibe-lms",
-    "url": "https://lms.gitsam.com",
-    "title": "SaaS LMS",
-    "description": "js, hono, markdown, stripe",
-    "tools": "js, hono, markdown, stripe",
+    "repo": "vibe-math",
+    "url": "https://primenumbersam-math.hf.space",
+    "title": "느좋수학 퍼즐어플",
+    "description": "Korean Math CoT Corpus",
+    "tools": "python, json, flutter, firebase, lean, llm, gradio, huggingface",
     "target-audience": "",
-    "filter": "web",
+    "filter": "ai",
     "type": "circle",
     "color": "#FFB703"
   },
   {
-    "repo": "lab-diary",
-    "url": "https://gitsam.com/lab-diary",
-    "title": "딸깍일기 어플",
-    "description": "AI 활용 일기장 모바일 어플",
-    "tools": "firebase",
+    "repo": "lms",
+    "url": "https://lms.gitsam.com",
+    "title": "Lightweight LMS",
+    "description": "js, hono, markdown, stripe",
+    "tools": "js, hono, markdown, stripe",
     "target-audience": "",
-    "desired-impact": "",
-    "filter": "ai",
+    "filter": "web",
     "type": "square",
-    "color": "#FFB703"
-  },
-  {
-    "repo": "lab-math",
-    "url": "https://primenumbersam-math.hf.space",
-    "title": "느좋수학 데이터셋",
-    "description": "Korean Math CoT Corpus",
-    "tools": "python, json, lean, llm, gradio, huggingface",
-    "target-audience": "",
-    "filter": "ai",
-    "type": "triangle",
-    "color": "#1D3557"
+    "color": "#1D3557",
+    "image": "screenshot/screen-lms.jpg"
   },
   {
     "repo": "lab-verify",
@@ -131,7 +120,7 @@
     "target-audience": "",
     "desired-impact": "",
     "filter": "ai",
-    "type": "triangle",
+    "type": "square",
     "color": "#1D3557"
   }
 ]
