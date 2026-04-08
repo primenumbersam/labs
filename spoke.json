@@ -20,7 +20,7 @@
     "tools": "Google AppSheet, Google Sheets, GTIN-13 Barcode, Mobile Camera (Scanner)",
     "target-audience": "물류 관리자, 소규모 브랜드 운영자, 1인 창업자",
     "desired-impact": "Ref(참조) 및 Dereference 수식을 활용한 실시간 상품 정보 쿼리 및 입출고 로깅 프로세스 구현. 수기 입력 오류 최소화",
-    "filter": "web",
+    "filter": "ai",
     "type": "triangle",
     "color": "#1D3557",
     "image": "screenshot/screen-brand-appsheet.jpg"
@@ -98,32 +98,10 @@
     "tools": "Nextjs, Vercel",
     "target-audience": "",
     "desired-impact": "",
-    "filter": "python",
+    "filter": "web",
     "type": "square",
     "color": "#E63946",
     "image": "screenshot/screen-kimp.jpg"
-  },
-  {
-    "repo": "vibe-invest",
-    "url": "https://invest.gitsam.com",
-    "title": "RaaS Investment",
-    "description": "MCP Server: Portfolio Visualizer, Quantecon library",
-    "tools": "python, reflex, polars, parquet, stripe",
-    "target-audience": "",
-    "filter": "python",
-    "type": "circle",
-    "color": "#FFB703"
-  },
-  {
-    "repo": "vibe-math",
-    "url": "https://primenumbersam-math.hf.space",
-    "title": "느좋수학 퍼즐어플",
-    "description": "Korean Math CoT Corpus",
-    "tools": "python, json, flutter, firebase, lean, llm, gradio, huggingface",
-    "target-audience": "",
-    "filter": "ai",
-    "type": "circle",
-    "color": "#FFB703"
   },
   {
     "repo": "lms",
@@ -148,5 +126,27 @@
     "filter": "ai",
     "type": "square",
     "color": "#1D3557"
+  },
+  {
+    "repo": "vibe-invest",
+    "url": "https://invest.gitsam.com",
+    "title": "RaaS Investment",
+    "description": "MCP Server: Portfolio Visualizer, Quantecon library",
+    "tools": "python, reflex, polars, parquet, stripe",
+    "target-audience": "",
+    "filter": "python",
+    "type": "circle",
+    "color": "#FFB703"
+  },
+  {
+    "repo": "vibe-math",
+    "url": "https://primenumbersam-math.hf.space",
+    "title": "느좋수학 퍼즐어플",
+    "description": "Korean Math CoT Corpus",
+    "tools": "python, json, flutter, firebase, lean, llm, gradio, huggingface",
+    "target-audience": "",
+    "filter": "ai",
+    "type": "circle",
+    "color": "#FFB703"
   }
 ]
