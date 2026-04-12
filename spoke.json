@@ -91,9 +91,34 @@
     "image": "screenshot/screen-superstar-vix.jpg"
   },
   {
+    "repo": "lms",
+    "url": "https://lms.gitsam.com",
+    "title": "Mini LMS",
+    "description": "js, hono, markdown, stripe",
+    "tools": "js, hono, markdown, stripe",
+    "target-audience": "",
+    "filter": "web",
+    "type": "square",
+    "color": "#1D3557",
+    "image": "screenshot/screen-lms.jpg"
+  },
+  {
+    "repo": "blog-youtube",
+    "url": "https://primenumbersam.blogspot.com/",
+    "title": "유튜브뉴스 분석록",
+    "description": "Youtube Briefer",
+    "tools": "Gemini, Youtube Transcript, Google Apps Script, Blogger 등",
+    "target-audience": "",
+    "desired-impact": "",
+    "filter": "ai",
+    "type": "triangle",
+    "color": "#1D3557",
+    "image": "screenshot/screen-blogger.jpg"
+  },
+  {
     "repo": "blog-nextjs-vercel",
     "url": "https://primenumbersam.vercel.app/",
-    "title": "느좋코린 현황판",
+    "title": "코인시장 현황판",
     "description": "코린이를 위한 김프, 지표, 뉴스",
     "tools": "Nextjs, Vercel",
     "target-audience": "",
@@ -104,34 +129,10 @@
     "image": "screenshot/screen-kimp.jpg"
   },
   {
-    "repo": "lms",
-    "url": "https://lms.gitsam.com",
-    "title": "Lightweight LMS",
-    "description": "js, hono, markdown, stripe",
-    "tools": "js, hono, markdown, stripe",
-    "target-audience": "",
-    "filter": "web",
-    "type": "square",
-    "color": "#1D3557",
-    "image": "screenshot/screen-lms.jpg"
-  },
-  {
-    "repo": "lab-verify",
-    "url": "https://gitsam.com/lab-verify",
-    "title": "저술검증 표준",
-    "description": "AI 활용 저술과정 검증",
-    "tools": "",
-    "target-audience": "",
-    "desired-impact": "",
-    "filter": "ai",
-    "type": "square",
-    "color": "#1D3557"
-  },
-  {
     "repo": "vibe-invest",
     "url": "https://invest.gitsam.com",
-    "title": "RaaS Investment",
-    "description": "MCP Server: Portfolio Visualizer, Quantecon library",
+    "title": "느좋투자 어플",
+    "description": "Investment RaaS MCP Server: Portfolio Visualizer, Quantecon library",
     "tools": "python, reflex, polars, parquet, stripe",
     "target-audience": "",
     "filter": "python",
