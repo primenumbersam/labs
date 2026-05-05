@@ -133,7 +133,7 @@
    "filter": "web",
    "type": "triangle",
    "color": "#FFB703",
-   "image": ""
+   "image": "screenshot/screen-netlify-eleventy.jpg"
  },
  {
    "repo": "blog-vercel-nextjs",
@@ -217,7 +217,7 @@
    "tool-deploy": "cloudflare",
    "filter": "web",
    "type": "circle",
-   "color": "#1D3557",
+   "color": "#FFB703",
    "image": "screenshot/screen-lms.jpg"
  },
  {
@@ -240,7 +240,7 @@
  {
    "repo": "agent-lms",
    "url": "https://github.com/primenumbersam/agent-lms",
-   "title": "LLM team for Teacher",
+   "title": "AI team for Teacher",
    "description": "Google ADK를 이용한 강의용 자료 생성 자동화 시스템",
    "target-audience": "기술분야 강의 자료 생산비용 최소화",
    "desired-impact": "LLM 종량제 (API-based) 사용",
@@ -257,7 +257,7 @@
  {
    "repo": "agent-invest",
    "url": "https://github.com/primenumbersam/agent-invest",
-   "title": "LLM team for Investor",
+   "title": "AI team for Investor",
    "description": "Hermes agent framework을 이용한 투자용 거시경제뉴스 수집분석 자동화 시스템",
    "target-audience": "투자관련 뉴스 속보 수집 및 분석 비용 최소화",
    "desired-impact": "LLM 구독제 (Oauth-based) 사용",
