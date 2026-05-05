@@ -190,78 +190,80 @@
             scroll-behavior: smooth;
         }
 
+        .gemini-floating-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(155, 114, 203, 0.3);
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 9999;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .gemini-floating-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(155, 114, 203, 0.2);
+            border-color: rgba(155, 114, 203, 0.6);
+        }
+
+        .gemini-icon {
+            width: 28px;
+            height: 28px;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .gemini-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gemini-text .label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .gemini-text .title {
+            font-size: 14px;
+            color: #1f1f1f;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .gemini-text small {
+            font-weight: 400;
+            color: #4285F4;
+        }
+
+        /* 모바일 대응: 화면이 작을 때는 텍스트를 숨기고 아이콘만 보여줄 수도 있습니다. */
+        @media (max-width: 480px) {
             .gemini-floating-button {
-                position: fixed;
-                bottom: 30px;
-                right: 30px;
-                display: flex;
-                align-items: center;
-                padding: 12px 20px;
-                background: rgba(255, 255, 255, 0.8);
-                backdrop-filter: blur(10px);
-                border: 1px solid rgba(155, 114, 203, 0.3);
-                border-radius: 50px;
-                text-decoration: none;
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-                transition: all 0.3s ease;
-                z-index: 9999;
-                font-family: 'Segoe UI', Roboto, sans-serif;
-            }
-
-            .gemini-floating-button:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 15px 30px rgba(155, 114, 203, 0.2);
-                border-color: rgba(155, 114, 203, 0.6);
-            }
-
-            .gemini-icon {
-                width: 28px;
-                height: 28px;
-                margin-right: 12px;
-                display: flex;
-                align-items: center;
+                bottom: 20px;
+                right: 20px;
+                padding: 12px;
             }
 
             .gemini-text {
-                display: flex;
-                flex-direction: column;
+                display: none;
+                /* 텍스트 숨기기 (선택 사항) */
             }
 
-            .gemini-text .label {
-                font-size: 10px;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                color: #666;
-                font-weight: bold;
+            .gemini-icon {
+                margin-right: 0;
             }
-
-            .gemini-text .title {
-                font-size: 14px;
-                color: #1f1f1f;
-                font-weight: 600;
-                white-space: nowrap;
-            }
-
-            .gemini-text small {
-                font-weight: 400;
-                color: #4285F4;
-            }
-
-            /* 모바일 대응: 화면이 작을 때는 텍스트를 숨기고 아이콘만 보여줄 수도 있습니다. */
-            @media (max-width: 480px) {
-                .gemini-floating-button {
-                    bottom: 20px;
-                    right: 20px;
-                    padding: 12px;
-                }
-                .gemini-text {
-                    display: none;
-                    /* 텍스트 숨기기 (선택 사항) */
-                }
-                .gemini-icon {
-                    margin-right: 0;
-                }
-            }
+        }
     </style>
 </head>
 
@@ -278,10 +280,10 @@
                 <div class="order-2 lg:order-1">
                     <p>GITSAM LAB | 삼순동순 기술</p>
                     <h1 class="text-3xl sm:text-5xl lg:text-5xl font-black tracking-tighter uppercase leading-[1] mb-2">
-                        느<span style="color: var(--bauhaus-red);">좋</span>코딩 <span
-                            style="color: var(--bauhaus-red);">좋</span>문<br><span
+                        느<span style="color: var(--bauhaus-red);">좋</span>창작 <span
+                            style="color: var(--bauhaus-red);">좋</span>문제거 <br><span
                             style="color: var(--bauhaus-red);">좋</span>소 <span
-                            style="color: var(--bauhaus-yellow);">스따럽</span>
+                            style="color: var(--bauhaus-yellow);">스따럽</span> 실험실
                     </h1>
                 </div>
 
@@ -366,7 +368,8 @@
         class="mt-8 border-t-[4px] border-black pt-2 pb-2 text-[10px] font-black uppercase flex flex-col md:flex-row justify-center items-center gap-8 max-w-[1400px] mx-auto">
 
         <p class="tracking-[0.2em] font-black bg-black text-white px-3 py-1 text-[10px]">느좋코딩 좋문 좋소기업</p>
-        <a href="https://gitsam.com" target="_blank" rel="noopener noreferrer" class="text-xl sm:text-2xl font-black tracking-tighter block hover:text-[var(--bauhaus-red)]">Gitsam</a>
+        <a href="https://gitsam.com" target="_blank" rel="noopener noreferrer"
+            class="text-xl sm:text-2xl font-black tracking-tighter block hover:text-[var(--bauhaus-red)]">Gitsam</a>
     </footer>
 
     <script>
@@ -560,7 +563,7 @@
                 const card = document.createElement('div');
                 card.className = 'bauhaus-card bauhaus-border h-full flex flex-col bg-white group';
                 let shapeHtml = '';
-                const shapeSize = 'w-7 h-7 sm:w-8 h-8'; 
+                const shapeSize = 'w-7 h-7 sm:w-8 h-8';
                 if (item.type === 'circle') shapeHtml = `<div class="${shapeSize} circle bauhaus-border" style="background-color: ${item.color}"></div>`;
                 else if (item.type === 'square') shapeHtml = `<div class="${shapeSize} square" style="background-color: ${item.color}"></div>`;
                 else shapeHtml = `<div class="w-0 h-0 border-l-[14px] border-l-transparent border-r-[14px] border-r-transparent border-b-[24px] border-b-black" style="border-bottom-color: ${item.color}"></div>`;
@@ -620,7 +623,8 @@
     </script>
 
     <!-- "System Prompted LLM (ft. Gemini)" 플로팅 버튼 -->
-    <a href="https://gemini.google.com/gem/1XuTbuj_KGr9JF_StNmKQlwlfxm0qznhM" class="gemini-floating-button" target="_blank" rel="noopener noreferrer">
+    <a href="https://gemini.google.com/gem/1XuTbuj_KGr9JF_StNmKQlwlfxm0qznhM" class="gemini-floating-button"
+        target="_blank" rel="noopener noreferrer">
         <div class="gemini-icon">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="url(#gemini-grad)" />

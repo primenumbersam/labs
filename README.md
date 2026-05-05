@@ -1,6 +1,6 @@
 # GITSAM LAB | Design Studio 🎨
 
-> "느좋코딩 좋문 좋소기업 깃샘"
+> "느좋창작 좋문제거 좋소기업 깃샘"
 
 This repository serves as a central **Hub** for various experimental projects (**Spokes**). It features a gamified UI inspired by the **Bauhaus** design movement—using primary colors, thick borders, and geometric shapes.
 
