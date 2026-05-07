@@ -2,42 +2,42 @@
  {
    "repo": "agent-invest",
    "url": "https://github.com/primenumbersam/agent-invest",
-   "title": "AI team for Investor",
-   "description": "Hermes agent framework을 이용한 투자용 거시경제뉴스 수집분석 자동화 시스템",
+   "title": "Agent team for Investor",
+   "description": "투자토론 부서. Multi-Agent System: Google ADK, Tauric Research TradingAgents (Multi-Agents LLM Financial Trading Framework)",
    "target-audience": "투자관련 뉴스 속보 수집 및 분석 비용 최소화",
-   "desired-impact": "LLM 구독제 (Oauth-based) 사용",
+   "desired-impact": "LLM 종량제 (API-based) 사용",
    "domain": "investment",
    "ai-use-stage": "production",
    "tool-ecosystem": "python",
    "tool-framework": "docker containered Hermes Agent Framework",
    "tool-deploy": "local server",
-   "filter": "python",
+   "filter": "ai",
    "type": "square",
    "color": "#1D3557",
    "image": ""
  },
  {
-   "repo": "agent-lms",
-   "url": "https://github.com/primenumbersam/agent-lms",
-   "title": "AI team for Teacher",
-   "description": "Google ADK를 이용한 강의용 자료 생성 자동화 시스템",
+   "repo": "agent-db",
+   "url": "https://wiki.gitsam.com",
+   "title": "Agent team for Teacher",
+   "description": "자료생성 부서. RAG, Multi-Role Single LLM system (Antigravity에서 agents.md 및 skills.md를 사용하여 자율 개발자 파이프라인 빌드)",
    "target-audience": "기술분야 강의 자료 생산비용 최소화",
-   "desired-impact": "LLM 종량제 (API-based) 사용",
+   "desired-impact": "LLM 구독제 (Oauth-based) 사용",
    "domain": "commerce",
    "ai-use-stage": "production",
    "tool-ecosystem": "python",
    "tool-framework": "Google ADK",
    "tool-deploy": "local server",
-   "filter": "python",
+   "filter": "ai",
    "type": "square",
-   "color": "#1D3557",
+   "color": "#FFB703",
    "image": ""
  },
  {
    "repo": "app-invest",
    "url": "https://invest.gitsam.com",
    "title": "Mini Invest",
-   "description": "개인용 블대리, Investment RaaS Server: Portfolio Visualizer, Quantecon library, OpenBB Platform, Tauric Research TradingAgents (Multi-Agents LLM Financial Trading Framework)",
+   "description": "개인용 블대리, Investment RaaS Server: Portfolio Visualizer, Quantecon library, OpenBB Platform, KIS API, Modular FastAPI, API-based LLM connection",
    "target-audience": "개인용 블대리가 필요한 금융시장 투자자",
    "desired-impact": "무겁고 비싼 Bloomberg terminal을 대체하는 가볍고 무료인 개인용 블대리",
    "domain": "investment",
@@ -47,7 +47,7 @@
    "tool-deploy": "local server",
    "filter": "python",
    "type": "circle",
-   "color": "#FFB703",
+   "color": "#1D3557",
    "image": ""
  },
  {
@@ -68,10 +68,10 @@
    "image": "screenshot/screen-lms.jpg"
  },
  {
-   "repo": "blog-quartz-obsidian",
-   "url": "https://wiki.gitsam.com",
-   "title": "Obsidian Wiki LLM",
-   "description": "국장미장 네트워크 안내서",
+   "repo": "blog-obsidian-quartz",
+   "url": "https://obsidian.gitsam.com",
+   "title": "Obsidian LLM Wiki",
+   "description": "반자동 투자공부. RAG: web clipping wikipedia (국장미장 네트워크)",
    "target-audience": "LLM Wiki. obsidian (local)에서 글 정리하고 quartz ssg로 구워서 github pages에 배포하고 싶은 작가",
    "desired-impact": "obsidian clipper + graph view + LLM CLI + AI Harness Engineering 적극 활용",
    "domain": "investment",
@@ -81,14 +81,14 @@
    "tool-deploy": "github pages",
    "filter": "web",
    "type": "triangle",
-   "color": "#FFB703",
+   "color": "#1D3557",
    "image": ""
  },
  {
    "repo": "blog-astro-notion",
-   "url": "https://blog.gitsam.com",
-   "title": "Notion Blog",
-   "description": "IT기술 안내서",
+   "url": "https://notion.gitsam.com",
+   "title": "Notion LLM Blog",
+   "description": "반자동 기술공부. RAG: web clipping geeknews, via crawl4ai (지원정보, 쇼핑(신제품,할인)정보), Hermes agent framework to notion db",
    "target-audience": "notion (cloud)에서 글 정리하고 astro ssg로 구워서 cloudflare pages에 배포하고 싶은 작가",
    "desired-impact": "SEO 되는 무료 notion publish 시스템",
    "domain": "technology",
@@ -115,7 +115,7 @@
    "tool-deploy": "google blogger",
    "filter": "ai",
    "type": "triangle",
-   "color": "#1D3557",
+   "color": "#E63946",
    "image": "screenshot/screen-blogger.jpg"
  },
  {
@@ -169,7 +169,7 @@
    "color": "#E63946",
    "image": "screenshot/screen-streamlit-start.jpg"
  },
-{
+ {
    "repo": "lab-openbb",
    "url": "https://github.com/primenumbersam/lab-openbb",
    "title": "Modular FastAPI Widget",
@@ -183,12 +183,12 @@
    "tool-deploy": "local server",
    "filter": "python",
    "type": "square",
-   "color": "#E63946",
+   "color": "#1D3557",
    "image": "screenshot/screen-openbb.jpg"
  },
-{
+ {
    "repo": "lab-netlify-eleventy",
-   "url": "https://lab-eleventy-libdoc.netlify.app/",
+   "url": "https://github.com/primenumbersam/lab-eleventy",
    "title": "Docs SSG",
    "description": "https://eleventy-libdoc.netlify.app/ 따라하기",
    "target-audience": "Tree Structure 방식으로 link 된 md 파일을 구워서 배포하기",
