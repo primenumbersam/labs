@@ -188,7 +188,7 @@
  },
  {
    "repo": "lab-netlify-eleventy",
-   "url": "https://github.com/primenumbersam/lab-eleventy",
+   "url": "https://lab-eleventy-libdoc.netlify.app/",
    "title": "Docs SSG",
    "description": "https://eleventy-libdoc.netlify.app/ 따라하기",
    "target-audience": "Tree Structure 방식으로 link 된 md 파일을 구워서 배포하기",
