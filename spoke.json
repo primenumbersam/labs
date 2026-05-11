@@ -68,10 +68,10 @@
    "image": "screenshot/screen-papers.jpg"
  },
  {
-   "repo": "blog-obsidian-quartz",
-   "url": "https://obsidian.gitsam.com",
+   "repo": "blog-quartz-obsidian",
+   "url": "https://gitsam.com/blog-quartz-obsidian",
    "title": "Obsidian LLM Wiki",
-   "description": "반자동 개념공부. RAG: web clipping glossary, wikipedia, britannica",
+   "description": "반자동 개념학습. RAG: web clipping glossary, wikipedia, britannica",
    "target-audience": "LLM Wiki. obsidian (local)에서 글 정리하고 quartz ssg로 구워서 github pages에 배포하고 싶은 작가",
    "desired-impact": "obsidian clipper + graph view + LLM CLI + AI Harness Engineering 적극 활용",
    "domain": "technology",
