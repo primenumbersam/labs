@@ -17,11 +17,11 @@
    "image": "screenshot/screen-google.jpg"
  },
  {
-   "repo": "agent-office",
+   "repo": "lab-ia",
    "url": "https://gitsam.com/lab-ia",
    "title": "AI 투자자문? 블대리? 롱숏대전",
-   "description": "AI 투자자문사 (LLM Investment Advisors), Isometric Pixel Art UI, TradingAgents' Multi-Agent System",
-   "target-audience": "투자관련 뉴스 속보 수집 및 분석 비용 최소화, 단 AI 헛소리에 대한 결과 책임은 각자부담.",
+   "description": "AI 투자자문사 (LLM-powered Investment Advisors), Managed Agentic AI, TradingAgents Workflow, Paperclip UI",
+   "target-audience": "투자관련 뉴스 속보 수집 및 분석 비용 최소화, 단 AI 헛소리에 대한 결과 책임은 각자부담. Isometric Pixel Art UI를 원하면 Claude Office or Squad 참조",
    "desired-impact": "LLM 종량제 (API-based) 사용",
    "domain": "investment",
    "ai-use-stage": "production",
@@ -87,7 +87,7 @@
  {
    "repo": "blog-astro-notion",
    "url": "https://notion.gitsam.com",
-   "title": "Blog-Notion LLM Blog",
+   "title": "Blog-Notion LLM",
    "description": "반자동 기술공부. RAG: web clipping geeknews, Notion AI",
    "target-audience": "Notion + LLM (cloud)에서 글 정리하고 Astro ssg로 구워서 cloudflare pages에 배포하고 싶은 작가",
    "desired-impact": "SEO 되는 무료 notion publish 시스템",
@@ -96,7 +96,7 @@
    "tool-ecosystem": "js",
    "tool-framework": "notion db, astro ssg",
    "tool-deploy": "cloudflare",
-   "filter": "web",
+   "filter": "ai",
    "type": "triangle",
    "color": "#FFB703",
    "image": "screenshot/screen-blog-astro-notion.jpg"
@@ -113,7 +113,7 @@
    "tool-ecosystem": "js",
    "tool-framework": "obsidian md, quartz ssg",
    "tool-deploy": "github pages",
-   "filter": "web",
+   "filter": "ai",
    "type": "triangle",
    "color": "#FFB703",
    "image": "screenshot/screen-quartz.jpg"
@@ -147,7 +147,7 @@
    "tool-ecosystem": "js",
    "tool-framework": "nextjs",
    "tool-deploy": "vercel",
-   "filter": "web",
+   "filter": "python",
    "type": "triangle",
    "color": "#E63946",
    "image": "screenshot/screen-kimp.jpg"
@@ -232,7 +232,7 @@
    "tool-ecosystem": "python",
    "tool-framework": "open source",
    "tool-deploy": "github pages",
-   "filter": "python",
+   "filter": "web",
    "type": "square",
    "color": "#FFB703",
    "image": "screenshot/screen-pdf-bookcase.jpg"
