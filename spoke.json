@@ -206,10 +206,10 @@
  {
    "repo": "lab-netlify-eleventy",
    "url": "https://lab-eleventy-libdoc.netlify.app/",
-   "title": "Deploy-Docs with SSG",
-   "description": "https://eleventy-libdoc.netlify.app/ 따라하기",
+   "title": "Deploy-Docs with SSG+Typst",
+   "description": "md-html, typ-pdf 파일 배포용. Typst 빌드를 Node.js 생태계 Eleventy SSG 빌드 과정에 넣기",
    "target-audience": "Tree Structure 방식으로 link 된 md 파일을 구워서 배포하기",
-   "desired-impact": "로컬 md 파일 배포용 eleventy ssg 실습",
+   "desired-impact": "https://eleventy-libdoc.netlify.app/ 따라하기",
    "domain": "technology",
    "ai-use-stage": "development",
    "tool-ecosystem": "js",
