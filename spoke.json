@@ -17,10 +17,10 @@
     "image": "screenshot/screen-google.jpg"
   },
   {
-    "repo": "lms",
-    "url": "https://lms.gitsam.com",
+    "repo": "app-lms",
+    "url": "https://github.com/primenumbersam/lms",
     "title": "Mini LMS",
-    "description": "강의팔이용 경량 시스템, AI 활용 강의 자료+대본 생산",
+    "description": "강의팔이용 경량 시스템, AI 활용 강의 자료+대본 생산 <br> Cloudflare with Hono Framework",
     "target-audience": "강의 자료 생산 비용 및 시간 최소화. 가볍고 관리가 쉬운 강의팔이 시스템이 필요한 1인 강사",
     "desired-impact": "LLM 종량제 (API-based) 사용",
     "domain": "commerce",
@@ -36,8 +36,8 @@
   {
     "repo": "lab-openbb",
     "url": "https://github.com/primenumbersam/lab-openbb",
-    "title": "Modular FastAPI for Widget",
-    "description": "FastAPI framework (Python backend)로 만든 다중자산 투기전략실험실, 투자결정도우미 (블대리)",
+    "title": "Modular FastAPI for App",
+    "description": "다중자산 자산배분모형 실험실 (분석용 블대리) <br> FastAPI framework (Python backend wrapper)",
     "target-audience": "OpenBB Workspace 맞춤형 백엔드 위젯이 필요한 금융시장 투자자 및 분석가",
     "desired-impact": "Pre-built widgets for financial data",
     "domain": "investment",
@@ -51,10 +51,10 @@
     "image": "screenshot/screen-openbb.jpg"
   },
   {
-    "repo": "lab-streamlit",
-    "url": "https://primenumbersam-lab.streamlit.app/",
-    "title": "Monolithic Streamlit App",
-    "description": "Streamlit framework (+Python+Parquet) for Mainstreet Nowcast + WallStreet Forecast",
+    "repo": "lab-hf-gradio",
+    "url": "https://primenumbersam-caster.hf.space/",
+    "title": "Monolithic Web App",
+    "description": "Mainstreet Nowcast + WallStreet Forecast <br> c.f. <a href=\"https://primenumbersam-lab-streamlit-start.hf.space/\" target=\"_blank\" class=\"underline hover:text-black\">HF Space</a> vs. <a href=\"https://primenumbersam-lab.streamlit.app\" target=\"_blank\" class=\"underline hover:text-black\">Streamlit CC</a>",
     "target-audience": "경제 통계와 현실의 괴리를 느끼는 사람들",
     "desired-impact": "경제 지표 분석 및 시각화",
     "domain": "investment",
@@ -238,7 +238,7 @@
     "image": "screenshot/screen-pdf-bookcase.jpg"
   },
   {
-    "repo": "lab-diary",
+    "repo": "app-trading-diary",
     "url": "./mini-local-diary-windows.zip",
     "title": "Mini Local Diary",
     "description": "초경량 포터블 데스크톱 일기장",
