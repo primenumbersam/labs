@@ -36,7 +36,7 @@
   {
     "repo": "lab-framework",
     "url": "https://github.com/primenumbersam/lab-framework",
-    "title": "Modular App at Github",
+    "title": "Modular Framework at Github",
     "description": "다중자산 자산배분모형 실험실 (분석용 블대리) <br> FastAPI framework (Python backend wrapper). <br>c.f. <a href=\"https://github.com/primenumbersam/lab-openbb\" target=\"_blank\" class=\"underline hover:text-black\">Openbb Boilerplate</a>",
     "target-audience": "맞춤형 백엔드 위젯이 필요한 금융시장 투자자 및 분석가",
     "desired-impact": "Framework for Portfolio Simulation",
@@ -48,7 +48,7 @@
     "filter": "python",
     "type": "square",
     "color": "#E63946",
-    "image": "screenshot/screen-openbb.jpg"
+    "image": "screenshot/screen-framework.jpg"
   },
   {
     "repo": "lab-hf-gradio",
@@ -65,7 +65,7 @@
     "filter": "python",
     "type": "square",
     "color": "#FFB703",
-    "image": "screenshot/screen-streamlit-start.jpg"
+    "image": "screenshot/screen-caster.jpg"
   },
   {
     "repo": "books",
