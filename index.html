@@ -543,6 +543,12 @@
         /* --- HUB DATA & RENDER --- */
         let spokeData = [];
 
+        const FILTER_THEMES = {
+            ai: { type: 'circle', color: '#FFB703' },
+            python: { type: 'triangle', color: '#1D3557' },
+            web: { type: 'square', color: '#E63946' }
+        };
+
         async function fetchData() {
             try {
                 const response = await fetch('spoke.json');
@@ -561,11 +567,16 @@
             filteredData.forEach((item, index) => {
                 const card = document.createElement('div');
                 card.className = 'bauhaus-card bauhaus-border h-full flex flex-col bg-white group';
+                
+                const theme = FILTER_THEMES[item.filter] || { type: 'square', color: '#111111' };
+                const shapeType = item.type || theme.type;
+                const shapeColor = item.color || theme.color;
+
                 let shapeHtml = '';
                 const shapeSize = 'w-7 h-7 sm:w-8 h-8';
-                if (item.type === 'circle') shapeHtml = `<div class="${shapeSize} circle bauhaus-border" style="background-color: ${item.color}"></div>`;
-                else if (item.type === 'square') shapeHtml = `<div class="${shapeSize} square" style="background-color: ${item.color}"></div>`;
-                else shapeHtml = `<div class="w-0 h-0 border-l-[14px] border-l-transparent border-r-[14px] border-r-transparent border-b-[24px] border-b-black" style="border-bottom-color: ${item.color}"></div>`;
+                if (shapeType === 'circle') shapeHtml = `<div class="${shapeSize} rounded-full circle bauhaus-border" style="background-color: ${shapeColor}"></div>`;
+                else if (shapeType === 'square') shapeHtml = `<div class="${shapeSize} square" style="background-color: ${shapeColor}"></div>`;
+                else shapeHtml = `<div class="w-0 h-0 border-l-[14px] border-l-transparent border-r-[14px] border-r-transparent border-b-[24px]" style="border-bottom-color: ${shapeColor}"></div>`;
 
                 card.innerHTML = `
                     <div class="aspect-square w-full bauhaus-border border-t-0 border-l-0 border-r-0 bg-[#F5F5F5] relative overflow-hidden">
@@ -574,7 +585,7 @@
                         <div class="absolute top-4 left-4 font-black text-[8px] bg-white px-1 py-0.5 border border-black z-10 uppercase tracking-tighter">0${index + 1} // ${item.repo}</div>
                     </div>
                     <div class="p-6 sm:p-8 flex flex-col flex-grow">
-                        <h3 class="text-lg sm:text-[18px] font-black mb-3 leading-[1.1] tracking-tighter">${item.title}</h3>
+                        <h3 class="text-lg sm:text-[16px] font-black mb-3 leading-[1.1] tracking-tighter">${item.title}</h3>
                         <p class="text-[11px] mb-8 flex-grow leading-relaxed font-medium opacity-60">${item.description}</p>
                         <div class="mt-auto pt-6 border-t-[2px] border-black border-opacity-10 flex items-center justify-between">
                             <a href="${item.url}" target="_blank" class="inline-flex items-center gap-2 group text-[10px] font-black uppercase tracking-widest hover:text-[var(--bauhaus-red)] transition-colors">

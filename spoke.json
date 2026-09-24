@@ -12,26 +12,37 @@
     "tool-framework": "google apps",
     "tool-deploy": "google sties",
     "filter": "ai",
-    "type": "triangle",
-    "color": "#1D3557",
     "image": "screenshot/screen-google.jpg"
+  },
+  {
+    "repo": "lab-forecaster",
+    "url": "https://primenumbersam.pages.dev/",
+    "title": "Market Caster (ML-based)",
+    "description": "경기현황 알림 +  증시방향 예보 (월간) <br> Mainstreet Nowcast + WallStreet Forecast <br> Flash Data Not Final Data. <br> Github + Kaggle + Cloudflare: Polars (Python)",
+    "target-audience": "실물경제와 자본시장의 방향성이 궁금한 사람들",
+    "desired-impact": "확률적 롱숏 방향성 예측",
+    "domain": "investment",
+    "ai-use-stage": "development",
+    "tool-ecosystem": "python",
+    "tool-framework": "streamlit",
+    "tool-deploy": "Hugging Face",
+    "filter": "python",
+    "image": "screenshot/screen-caster.jpg"
   },
   {
     "repo": "lab-pfo",
     "url": "https://github.com/primenumbersam/lab-pfo",
-    "title": "Portfolio Simulation",
-    "description": "Github: 다중자산 자산배분모형 실험실 (분석용 블대리) <br>FastAPI framework (Python backend wrapper). <br>c.f. <a href=\"https://github.com/primenumbersam/lab-openbb\" target=\"_blank\" class=\"underline hover:text-black\">Openbb Boilerplate</a>",
+    "title": "Portfolio Simulation Framework",
+    "description": "Github: 다중자산 자산배분모형 실험실 (분석용 블대리)<br>정제 DB + 전략 개발 + 분석 (월봉, 다중자산)<br>Alternative to LEAN, Matlab<br>Github: DuckDB (SQL) + FastAPI  + Vite",
     "target-audience": "맞춤형 백엔드 위젯이 필요한 금융시장 투자자 및 분석가",
-    "desired-impact": "Framework for Portfolio Simulation",
+    "desired-impact": "Portfolio Simulation Framework",
     "domain": "investment",
     "ai-use-stage": "development",
     "tool-ecosystem": "python",
     "tool-framework": "fastapi, uvicorn, vite",
     "tool-deploy": "local server",
     "filter": "python",
-    "type": "square",
-    "color": "#E63946",
-    "image": "screenshot/Office_anim_SM.gif"
+    "image": "screenshot/screen-framework.jpg"
   },
   {
     "repo": "lab-pfo-etf",
@@ -42,19 +53,17 @@
     "desired-impact": "",
     "domain": "investment",
     "ai-use-stage": "development",
-    "tool-ecosystem": "python",
-    "tool-framework": "quarto",
+    "tool-ecosystem": "go",
+    "tool-framework": "hugo",
     "tool-deploy": "gitlab",
     "filter": "python",
-    "type": "triangle",
-    "color": "#1D3557",
     "image": "screenshot/Office_anim_SM.gif"
   },
   {
     "repo": "lab-hf-gradio",
     "url": "https://primenumbersam-stock.hf.space/",
     "title": "US Stock Valuation",
-    "description": "HF: Monolithic Comparison App <br> Absolute DCF, Relative Multiples, Optimism Bias <br> c.f. <a href=\"https://primenumbersam-lab-streamlit-start.hf.space/\" target=\"_blank\" class=\"underline hover:text-black\">HF Space</a> vs. <a href=\"https://primenumbersam-lab.streamlit.app\" target=\"_blank\" class=\"underline hover:text-black\">Streamlit CC</a>",
+    "description": "HF: Monolithic Comparison App <br> Absolute DCF, Relative Multiples, Optimism Bias <br> c.f. Gradio at HF vs. <a href=\"https://primenumbersam-lab.streamlit.app\" target=\"_blank\" class=\"underline hover:text-black\">Streamlit CC</a>",
     "target-audience": "",
     "desired-impact": "",
     "domain": "investment",
@@ -63,9 +72,52 @@
     "tool-framework": "gradio",
     "tool-deploy": "Hugging Face",
     "filter": "python",
-    "type": "square",
-    "color": "#FFB703",
-    "image": "screenshot/Office_anim_SM.gif"
+    "image": "screenshot/screen-us-stock.jpg"
+  },
+  {
+    "repo": "quarto-lab",
+    "url": "https://gitlab.com/primenumbersam/quarto-lab",
+    "title": "US Bond Valuation",
+    "description": "미국 국채수익률 동태 <br> Real-time Dynamics of Yield Curves <br> Quarto's Liberate Programming",
+    "target-audience": "",
+    "desired-impact": "",
+    "domain": "investment",
+    "ai-use-stage": "development",
+    "tool-ecosystem": "python",
+    "tool-framework": "quarto",
+    "tool-deploy": "gitlab",
+    "filter": "python",
+    "image": "screenshot/screen-us-bond.jpg"
+  },
+  {
+    "repo": "lab-superstar-vix",
+    "url": "https://primenumbersam-vix.streamlit.app/",
+    "title": "Superstar VIX at Streamlit",
+    "description": "Historical Volatility Index of Superstar Stocks in KR and US Market",
+    "target-audience": "주식시장 전문투자자",
+    "desired-impact": "초양극화 경제구조에 맞는 historical VIX",
+    "domain": "investment",
+    "ai-use-stage": "development",
+    "tool-ecosystem": "python",
+    "tool-framework": "streamlit, sqlite",
+    "tool-deploy": "streamlit community cloud",
+    "filter": "python",
+    "image": "screenshot/screen-superstar-vix.jpg"
+  },
+  {
+    "repo": "app-trading-diary",
+    "url": "https://github.com/primenumbersam/diary",
+    "title": "Diary for Swing Trading",
+    "description": "매매 계획+복기 일지 (일봉, 다중자산)<br>Alternative to tradesviz,  tradervue<br>FastAPI + HTMX",
+    "target-audience": "맞춤형 백엔드 위젯이 필요한 금융시장 투자자 및 분석가",
+    "desired-impact": "Modular Backend for Portfolio Simulation",
+    "domain": "investment",
+    "ai-use-stage": "development",
+    "tool-ecosystem": "python",
+    "tool-framework": "fastapi, uvicorn, openbb",
+    "tool-deploy": "local server",
+    "filter": "python",
+    "image": "screenshot/screen-trading-diary.jpg"
   },
   {
     "repo": "app-lms",
@@ -80,8 +132,6 @@
     "tool-framework": "hono",
     "tool-deploy": "cloudflare",
     "filter": "web",
-    "type": "square",
-    "color": "#E63946",
     "image": "screenshot/screen-lms.jpg"
   },
   {
@@ -97,8 +147,6 @@
     "tool-framework": "nextjs",
     "tool-deploy": "vercel",
     "filter": "python",
-    "type": "triangle",
-    "color": "#E63946",
     "image": "screenshot/screen-kimp.jpg"
   },
   {
@@ -114,8 +162,6 @@
     "tool-framework": "SSG, hugo, mkdocs, CI/CD",
     "tool-deploy": "gitlab group",
     "filter": "web",
-    "type": "triangle",
-    "color": "#FFB703",
     "image": "screenshot/screen-books.jpg"
   },
   {
@@ -131,8 +177,6 @@
     "tool-framework": "quarto",
     "tool-deploy": "gitlab pages",
     "filter": "web",
-    "type": "triangle",
-    "color": "#FFB703",
     "image": "screenshot/screen-papers.jpg"
   },
   {
@@ -148,8 +192,6 @@
     "tool-framework": "google apps script",
     "tool-deploy": "google blogger",
     "filter": "ai",
-    "type": "triangle",
-    "color": "#1D3557",
     "image": "screenshot/screen-blogger.jpg"
   },
   {
@@ -165,8 +207,6 @@
     "tool-framework": "obsidian md, quartz ssg",
     "tool-deploy": "github pages",
     "filter": "ai",
-    "type": "triangle",
-    "color": "#FFB703",
     "image": "screenshot/screen-quartz.jpg"
   },
   {
@@ -182,26 +222,7 @@
     "tool-framework": "notion db, astro ssg",
     "tool-deploy": "cloudflare",
     "filter": "ai",
-    "type": "triangle",
-    "color": "#FFB703",
     "image": "screenshot/screen-blog-astro-notion.jpg"
-  },
-  {
-    "repo": "lab-superstar-vix",
-    "url": "https://primenumbersam-vix.streamlit.app/",
-    "title": "Superstar VIX at Streamlit",
-    "description": "Historical Volatility Index of Superstar Stocks in KR and US Market",
-    "target-audience": "주식시장 전문투자자",
-    "desired-impact": "초양극화 경제구조에 맞는 historical VIX",
-    "domain": "investment",
-    "ai-use-stage": "development",
-    "tool-ecosystem": "python",
-    "tool-framework": "streamlit, sqlite",
-    "tool-deploy": "streamlit community cloud",
-    "filter": "python",
-    "type": "square",
-    "color": "#E63946",
-    "image": "screenshot/screen-superstar-vix.jpg"
   },
   {
     "repo": "lab-netlify-eleventy",
@@ -216,9 +237,22 @@
     "tool-framework": "eleventy ssg",
     "tool-deploy": "netlify",
     "filter": "web",
-    "type": "triangle",
-    "color": "#FFB703",
     "image": "screenshot/screen-netlify-eleventy.jpg"
+  },
+  {
+    "repo": "lab-openbb",
+    "url": "https://github.com/primenumbersam/lab-openbb",
+    "title": "Modular FastAPI Widget",
+    "description": "FastAPI Boilerplate for OpenBB Widget",
+    "target-audience": "맞춤형 백엔드 위젯이 필요한 금융시장 투자자 및 분석가",
+    "desired-impact": "",
+    "domain": "investment",
+    "ai-use-stage": "development",
+    "tool-ecosystem": "python",
+    "tool-framework": "fastapi, uvicorn, openbb",
+    "tool-deploy": "local server",
+    "filter": "python",
+    "image": "screenshot/screen-openbb.jpg"
   },
   {
     "repo": "lab-pdf-bookcase",
@@ -233,15 +267,13 @@
     "tool-framework": "open source",
     "tool-deploy": "github pages",
     "filter": "web",
-    "type": "square",
-    "color": "#FFB703",
     "image": "screenshot/screen-pdf-bookcase.jpg"
   },
   {
-    "repo": "app-trading-diary",
+    "repo": "app-local-diary",
     "url": "./mini-local-diary-windows.zip",
     "title": "Mini Local Diary",
-    "description": "초경량 포터블 데스크톱 일기장",
+    "description": "초경량 포터블 데스크톱 일기장<br>python + neutralinojs",
     "target-audience": "개인정보 보호를 중시하며, 마크다운 문법에 친숙하고 가벼운 로컬 기록 환경이 필요한 사용자",
     "desired-impact": "외부 서버 및 웹호스팅 없이 로컬 디렉터리 내 평문 Markdown과 미디어 파일의 직접 제어 및 단일 바이너리 배포를 통한 이식성 확보",
     "domain": "technology",
@@ -250,8 +282,6 @@
     "tool-framework": "neutralinojs",
     "tool-deploy": "local",
     "filter": "python",
-    "type": "square",
-    "color": "#2A9D8F",
     "image": "screenshot/screen-diary.jpg"
   },
   {
@@ -266,9 +296,7 @@
     "tool-ecosystem": "google",
     "tool-framework": "google Sheets, AppSheet",
     "tool-deploy": "google AppSheet",
-    "filter": "python",
-    "type": "triangle",
-    "color": "#1D3557",
+    "filter": "web",
     "image": "screenshot/screen-brand-appsheet.jpg"
   }
 ]
