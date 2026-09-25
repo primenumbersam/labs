@@ -61,7 +61,7 @@
   },
   {
     "repo": "lab-pfo-etf",
-    "url": "https://github.com/primenumbersam/lab-pfo-etf",
+    "url": "https://gitsam.com/lab-pfo-etf/",
     "title": "US ETF Portfolio Comparison",
     "description": "존버형 US ETF 자산배분전략 성과비교 <br> yfinance + Golang <br> Github: JSON + Hugo + eCharts",
     "target-audience": "",
