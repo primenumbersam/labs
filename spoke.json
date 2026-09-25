@@ -45,6 +45,21 @@
     "image": "screenshot/screen-framework.jpg"
   },
   {
+    "repo": "app-trading-diary",
+    "url": "https://github.com/primenumbersam/diary",
+    "title": "Swing Trading Diary",
+    "description": "매매 계획+복기 일지 (일봉, 다중자산)<br>Alternative to tradesviz,  tradervue<br>FastAPI + HTMX",
+    "target-audience": "맞춤형 백엔드 위젯이 필요한 금융시장 투자자 및 분석가",
+    "desired-impact": "Modular Backend for Portfolio Simulation",
+    "domain": "investment",
+    "ai-use-stage": "development",
+    "tool-ecosystem": "python",
+    "tool-framework": "fastapi, uvicorn, openbb",
+    "tool-deploy": "local server",
+    "filter": "python",
+    "image": "screenshot/screen-trading-diary.jpg"
+  },
+  {
     "repo": "lab-pfo-etf",
     "url": "https://github.com/primenumbersam/lab-pfo-etf",
     "title": "US ETF Portfolio Comparison",
@@ -62,8 +77,8 @@
   {
     "repo": "lab-hf-gradio",
     "url": "https://primenumbersam-stock.hf.space/",
-    "title": "US Stock Valuation",
-    "description": "HF: Monolithic Comparison App <br> Absolute DCF, Relative Multiples, Optimism Bias <br> c.f. HF Gradio vs. <a href=\"https://primenumbersam-lab.streamlit.app\" target=\"_blank\" class=\"underline hover:text-black\">Streamlit CC</a>",
+    "title": "US Stock Valuations",
+    "description": "Absolute DCF, Relative Multiples, Optimism Bias<br>HF Gradio Monolithic App <br> c.f. <a href=\"https://primenumbersam-lab.streamlit.app\" target=\"_blank\" class=\"underline hover:text-black\">Streamlit CC</a>",
     "target-audience": "",
     "desired-impact": "",
     "domain": "investment",
@@ -77,7 +92,7 @@
   {
     "repo": "quarto-lab",
     "url": "https://primenumbersam.gitlab.io/quarto-lab/",
-    "title": "US Bond Valuation",
+    "title": "US Bond Valuations",
     "description": "미국 국채수익률 동태 <br>US Treasury Bond Yield Curve Dynamics<br>DuckDB + Quarto's Liberate Programming",
     "target-audience": "",
     "desired-impact": "",
@@ -103,21 +118,6 @@
     "tool-deploy": "streamlit community cloud",
     "filter": "python",
     "image": "screenshot/screen-superstar-vix.jpg"
-  },
-  {
-    "repo": "app-trading-diary",
-    "url": "https://github.com/primenumbersam/diary",
-    "title": "Diary for Swing Trading",
-    "description": "매매 계획+복기 일지 (일봉, 다중자산)<br>Alternative to tradesviz,  tradervue<br>FastAPI + HTMX",
-    "target-audience": "맞춤형 백엔드 위젯이 필요한 금융시장 투자자 및 분석가",
-    "desired-impact": "Modular Backend for Portfolio Simulation",
-    "domain": "investment",
-    "ai-use-stage": "development",
-    "tool-ecosystem": "python",
-    "tool-framework": "fastapi, uvicorn, openbb",
-    "tool-deploy": "local server",
-    "filter": "python",
-    "image": "screenshot/screen-trading-diary.jpg"
   },
   {
     "repo": "app-lms",
@@ -240,21 +240,6 @@
     "image": "screenshot/screen-netlify-eleventy.jpg"
   },
   {
-    "repo": "lab-openbb",
-    "url": "https://github.com/primenumbersam/lab-openbb",
-    "title": "Modular FastAPI Widget",
-    "description": "FastAPI Boilerplate for OpenBB Widget",
-    "target-audience": "맞춤형 백엔드 위젯이 필요한 금융시장 투자자 및 분석가",
-    "desired-impact": "",
-    "domain": "investment",
-    "ai-use-stage": "development",
-    "tool-ecosystem": "python",
-    "tool-framework": "fastapi, uvicorn, openbb",
-    "tool-deploy": "local server",
-    "filter": "python",
-    "image": "screenshot/screen-openbb.jpg"
-  },
-  {
     "repo": "lab-pdf-bookcase",
     "url": "https://gitsam.com/lab-pdf-bookcase",
     "title": "PDF 3D Bookcase",
@@ -270,21 +255,6 @@
     "image": "screenshot/screen-pdf-bookcase.jpg"
   },
   {
-    "repo": "app-local-diary",
-    "url": "./mini-local-diary-windows.zip",
-    "title": "Mini Local Diary",
-    "description": "초경량 포터블 데스크톱 일기장<br>python + neutralinojs",
-    "target-audience": "개인정보 보호를 중시하며, 마크다운 문법에 친숙하고 가벼운 로컬 기록 환경이 필요한 사용자",
-    "desired-impact": "외부 서버 및 웹호스팅 없이 로컬 디렉터리 내 평문 Markdown과 미디어 파일의 직접 제어 및 단일 바이너리 배포를 통한 이식성 확보",
-    "domain": "technology",
-    "ai-use-stage": "development",
-    "tool-ecosystem": "desktop os",
-    "tool-framework": "neutralinojs",
-    "tool-deploy": "local",
-    "filter": "python",
-    "image": "screenshot/screen-diary.jpg"
-  },
-  {
     "repo": "gdrive-appsheet",
     "url": "https://www.appsheet.com/home/apps",
     "title": "Barcode Inventory",
@@ -298,5 +268,35 @@
     "tool-deploy": "google AppSheet",
     "filter": "web",
     "image": "screenshot/screen-brand-appsheet.jpg"
+  },
+  {
+    "repo": "lab-openbb",
+    "url": "https://github.com/primenumbersam/lab-openbb",
+    "title": "Modular FastAPI Widget",
+    "description": "FastAPI Boilerplate for OpenBB Widget",
+    "target-audience": "맞춤형 백엔드 위젯이 필요한 금융시장 투자자 및 분석가",
+    "desired-impact": "",
+    "domain": "investment",
+    "ai-use-stage": "development",
+    "tool-ecosystem": "python",
+    "tool-framework": "fastapi, uvicorn, openbb",
+    "tool-deploy": "local server",
+    "filter": "python",
+    "image": "screenshot/screen-openbb.jpg"
+  },
+  {
+    "repo": "app-local-diary",
+    "url": "./mini-local-diary-windows.zip",
+    "title": "Mini Local Diary",
+    "description": "초경량 포터블 데스크톱 일기장<br>python + neutralinojs",
+    "target-audience": "개인정보 보호를 중시하며, 마크다운 문법에 친숙하고 가벼운 로컬 기록 환경이 필요한 사용자",
+    "desired-impact": "외부 서버 및 웹호스팅 없이 로컬 디렉터리 내 평문 Markdown과 미디어 파일의 직접 제어 및 단일 바이너리 배포를 통한 이식성 확보",
+    "domain": "technology",
+    "ai-use-stage": "development",
+    "tool-ecosystem": "desktop os",
+    "tool-framework": "neutralinojs",
+    "tool-deploy": "local",
+    "filter": "python",
+    "image": "screenshot/screen-diary.jpg"
   }
 ]
