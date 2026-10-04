@@ -567,7 +567,7 @@
             filteredData.forEach((item, index) => {
                 const card = document.createElement('div');
                 card.className = 'bauhaus-card bauhaus-border h-full flex flex-col bg-white group';
-                
+
                 const theme = FILTER_THEMES[item.filter] || { type: 'square', color: '#111111' };
                 const shapeType = item.type || theme.type;
                 const shapeColor = item.color || theme.color;
