@@ -16,9 +16,9 @@
   },
   {
     "repo": "lab-slm",
-    "url": "https://primenumbersam-slm.gitsam.com",
-    "title": "Testing Small Language Models",
-    "description": "Updated: 2026-10-04<br>Text Summarizers & SLM Comparison<br>HF Gradio Monolithic App",
+    "url": "https://primenumbersam-slm.hf.space",
+    "title": "Frontier Small Language Models",
+    "description": "Updated: 2026-10-04<br>Compare SLMs & Text Summarizers<br>HF Gradio Monolithic App",
     "target-audience": "",
     "desired-impact": "",
     "domain": "technology",
@@ -27,7 +27,7 @@
     "tool-framework": "gradio",
     "tool-deploy": "Hugging Face",
     "filter": "ai",
-    "image": "screenshot/screen-decapcms-hugo.jpg"
+    "image": "screenshot/screen-slm.jpg"
   },
   {
     "repo": "arena",
@@ -272,8 +272,8 @@
   {
     "repo": "lab-openbb",
     "url": "https://github.com/primenumbersam/lab-openbb",
-    "title": "Modular FastAPI Widget",
-    "description": "FastAPI Boilerplate for OpenBB Widget",
+    "title": "Dataset + Modular FastAPI Widget",
+    "description": "Dieted & In-progress FINSPID<br>FastAPI Boilerplate for OpenBB Widget",
     "target-audience": "맞춤형 백엔드 위젯이 필요한 금융시장 투자자 및 분석가",
     "desired-impact": "",
     "domain": "investment",
@@ -282,7 +282,7 @@
     "tool-framework": "fastapi, uvicorn, openbb",
     "tool-deploy": "local server",
     "filter": "python",
-    "image": "screenshot/screen-openbb.jpg"
+    "image": "screenshot/screen-data-finance.jpg"
   },
   {
     "repo": "app-local-diary",
@@ -296,7 +296,7 @@
     "tool-ecosystem": "desktop os",
     "tool-framework": "neutralinojs",
     "tool-deploy": "local",
-    "filter": "python",
+    "filter": "web",
     "image": "screenshot/screen-diary.jpg"
   }
 ]
