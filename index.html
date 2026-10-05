@@ -340,8 +340,8 @@
         <!-- Desktop: Buttons (Hidden on Mobile) -->
         <div class="hidden md:flex gap-4" id="filter-container">
             <button class="filter-btn active bauhaus-border px-8 py-3" data-category="all">All Spokes</button>
-            <button class="filter-btn bauhaus-border px-8 py-3" data-category="web">Web/CMS</button>
-            <button class="filter-btn bauhaus-border px-8 py-3" data-category="python">Data</button>
+            <button class="filter-btn bauhaus-border px-8 py-3" data-category="data_static">data_static</button>
+            <button class="filter-btn bauhaus-border px-8 py-3" data-category="data_dynamic">data_dynamic</button>
             <button class="filter-btn bauhaus-border px-8 py-3" data-category="ai">AI</button>
         </div>
         <!-- Mobile: Dropdown (Hidden on Desktop) -->
@@ -350,8 +350,8 @@
                 <select id="mobile-filter"
                     class="mobile-select w-full bauhaus-border px-4 py-4 font-black uppercase text-xs tracking-[0.2em] bg-white appearance-none cursor-pointer outline-none focus:border-[var(--bauhaus-red)]">
                     <option value="all">Category: All Spokes</option>
-                    <option value="web">Category: Web/CMS</option>
-                    <option value="python">Category: Data</option>
+                    <option value="data_static">Category: data_static</option>
+                    <option value="data_dynamic">Category: data_dynamic</option>
                     <option value="ai">Category: AI</option>
                 </select>
             </div>
@@ -545,8 +545,8 @@
 
         const FILTER_THEMES = {
             ai: { type: 'circle', color: '#FFB703' },
-            python: { type: 'triangle', color: '#1D3557' },
-            web: { type: 'square', color: '#E63946' }
+            data_dynamic: { type: 'triangle', color: '#1D3557' },
+            data_static: { type: 'square', color: '#E63946' }
         };
 
         async function fetchData() {
