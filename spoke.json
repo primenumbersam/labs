@@ -17,8 +17,8 @@
   {
     "repo": "lab-slm",
     "url": "https://primenumbersam-slm.hf.space",
-    "title": "Frontier Small Language Models",
-    "description": "Updated: 2026-10-04<br>Compare SLMs & Text Summarizers<br>HF Gradio Monolithic App",
+    "title": "Compare Open & Small Models",
+    "description": "SLMs & Text Summarizers (2026-10-04)<br>c.f. <a href=\"https://colab.research.google.com/github/primenumbersam/labs/blob/main/ai_models_decision.ipynb\" target=\"_blank\" class=\"underline hover:text-black\">Small Decision Models (Notebook)</a><br>HF Gradio Monolithic App",
     "target-audience": "",
     "desired-impact": "",
     "domain": "technology",
@@ -45,10 +45,10 @@
     "image": "screenshot/arena.gif"
   },
   {
-    "repo": "kaggle",
-    "url": "https://www.kaggle.com/code/samklee/data-finance-us",
+    "repo": "data-finance-us",
+    "url": "https://gitsam.com/data-finance-us/",
     "title": "Dataset + Notebook",
-    "description": "Dieted & In-progress FINSPID<br>US Financial Data Lakehouse",
+    "description": "Dieted FINSPID & In-progress Dataset<br>US Financial Data Lakehouse",
     "target-audience": "맞춤형 백엔드 데이터가 필요한 금융시장 투자자 및 분석가",
     "desired-impact": "",
     "domain": "investment",
