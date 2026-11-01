@@ -331,9 +331,9 @@
   },
   {
     "repo": "mini-tools-webapi",
-    "url": "https://github.com/primenumbersam/mini-tools-webapi",
-    "title": "Mini Image Compressor",
-    "description": "Image Compressor & Cropper, and PDF Merger",
+    "url": "https://gitsam.com/mini-tools-webapi/",
+    "title": "Mini SFA",
+    "description": "Single File Web App · Zero Build · Client-Side Privacy",
     "target-audience": "",
     "desired-impact": "",
     "domain": "technology",
