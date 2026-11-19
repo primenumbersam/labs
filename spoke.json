@@ -15,19 +15,19 @@
     "image": "screenshot/screen-google.jpg"
   },
   {
-    "repo": "lab-game",
-    "url": "https://lab-game.primenumbersam.workers.dev/",
-    "title": "Web Games for Edu-tainment",
-    "description": "핵찐따 아재의 두뇌운동을 위한 게임<br>Cloudflare: TypeScript PWA with Go",
+    "repo": "mini-quant",
+    "url": "https://gitsam.com/mini-quant/",
+    "title": "Mini SFA for Quants",
+    "description": "Artifacts for Client-side Computing",
     "target-audience": "",
     "desired-impact": "",
-    "domain": "technology",
+    "domain": "investment",
     "ai-use-stage": "development",
     "tool-ecosystem": "",
-    "tool-framework": "emulatorJS, go, rust, tauri",
-    "tool-deploy": "cloudflare",
-    "filter": "data_dynamic",
-    "image": "screenshot/screen-mini-games.jpg"
+    "tool-framework": "",
+    "tool-deploy": "github",
+    "filter": "data_static",
+    "image": "screenshot/screen-digitals.jpg"
   },
   {
     "repo": "hf-arena",
@@ -300,6 +300,21 @@
     "image": "screenshot/screen-netlify-eleventy.jpg"
   },
   {
+    "repo": "hf-slm",
+    "url": "https://primenumbersam-slm.hf.space",
+    "title": "Compare Open Small Models",
+    "description": "SLMs & Text Summarizers (2026-10-04)<br>c.f. <a href=\"https://colab.research.google.com/github/primenumbersam/labs/blob/main/ai_models_decision.ipynb\" target=\"_blank\" class=\"underline hover:text-black\">Small Decision Models (Notebook)</a><br>HF: Python Gradio App",
+    "target-audience": "",
+    "desired-impact": "",
+    "domain": "technology",
+    "ai-use-stage": "production",
+    "tool-ecosystem": "python",
+    "tool-framework": "gradio",
+    "tool-deploy": "Hugging Face",
+    "filter": "ai",
+    "image": "screenshot/screen-slm.jpg"
+  },
+  {
     "repo": "lab-factory-pdf",
     "url": "https://gitsam.com/lab-factory-pdf",
     "title": "AI PDF Factory",
@@ -317,8 +332,8 @@
   {
     "repo": "lab-factory-emoticon",
     "url": "https://gitsam.notion.site/Studio-AI-Directing-243d716ee0de801ba510d76792aef641?pvs=74",
-    "title": "AI Multimedia Factory",
-    "description": "Trending Multimedia for Ad Revenue Sharing<br>Workflow Direction with Local & Cloud AI",
+    "title": "AI Statics Factory",
+    "description": "Trending Static Assets for SNS<br>Workflow Directions. Local & Cloud AI",
     "target-audience": "",
     "desired-impact": "",
     "domain": "technology",
@@ -330,19 +345,19 @@
     "image": "screenshot/screen-mini-pipeline.jpg"
   },
   {
-    "repo": "mini-pdf-compress-ghostscript",
-    "url": "https://github.com/primenumbersam/mini-pdf-compress-ghostscript",
-    "title": "Mini Local PDF compressor",
-    "description": "Built with Go and ghostscript",
+    "repo": "lab-factory-video",
+    "url": "https://gitsam.com/lab-factory-video",
+    "title": "AI Video Factory",
+    "description": "텍스트만으로 온갖 영상 딸깍 제작<br>HyperFrames(HTML) vs Remotion(React)",
     "target-audience": "",
     "desired-impact": "",
     "domain": "technology",
     "ai-use-stage": "development",
-    "tool-ecosystem": "go",
-    "tool-framework": "ghostscript",
+    "tool-ecosystem": "",
+    "tool-framework": "",
     "tool-deploy": "github",
-    "filter": "data_static",
-    "image": "screenshot/screen-mini-pdf-compressor.jpg"
+    "filter": "ai",
+    "image": "screenshot/screen-video.webp"
   },
   {
     "repo": "mini-local-diary",
@@ -360,19 +375,19 @@
     "image": "screenshot/screen-diary.jpg"
   },
   {
-    "repo": "mini-quant",
-    "url": "https://gitsam.com/mini-quant/",
-    "title": "Mini SFA for Quants",
-    "description": "Artifacts for Client-side Computing",
+    "repo": "mini-tools-webapi",
+    "url": "https://gitsam.com/mini-tools-webapi/",
+    "title": "Mini SFA",
+    "description": "Single File Web App · Zero Build · Privacy",
     "target-audience": "",
     "desired-impact": "",
-    "domain": "investment",
+    "domain": "technology",
     "ai-use-stage": "development",
-    "tool-ecosystem": "",
-    "tool-framework": "",
+    "tool-ecosystem": "html",
+    "tool-framework": "browser web api",
     "tool-deploy": "github",
     "filter": "data_static",
-    "image": "screenshot/screen-digitals.jpg"
+    "image": "screenshot/screen-mini-tools.jpg"
   },
   {
     "repo": "mini-studio",
@@ -390,33 +405,18 @@
     "image": "screenshot/screen-mini-design.jpg"
   },
   {
-    "repo": "mini-tools-webapi",
-    "url": "https://gitsam.com/mini-tools-webapi/",
-    "title": "Mini SFA",
-    "description": "Single File Web App · Zero Build · Privacy",
+    "repo": "lab-game",
+    "url": "https://lab-game.primenumbersam.workers.dev/",
+    "title": "Web Games for Edu-tainment",
+    "description": "핵찐따 아재의 두뇌운동을 위한 게임<br>Cloudflare: TypeScript PWA with Go",
     "target-audience": "",
     "desired-impact": "",
     "domain": "technology",
     "ai-use-stage": "development",
-    "tool-ecosystem": "html",
-    "tool-framework": "browser web api",
-    "tool-deploy": "github",
-    "filter": "data_static",
-    "image": "screenshot/screen-mini-tools.jpg"
-  },
-  {
-    "repo": "hf-slm",
-    "url": "https://primenumbersam-slm.hf.space",
-    "title": "Compare Open Small Models",
-    "description": "SLMs & Text Summarizers (2026-10-04)<br>c.f. <a href=\"https://colab.research.google.com/github/primenumbersam/labs/blob/main/ai_models_decision.ipynb\" target=\"_blank\" class=\"underline hover:text-black\">Small Decision Models (Notebook)</a><br>HF: Python Gradio App",
-    "target-audience": "",
-    "desired-impact": "",
-    "domain": "technology",
-    "ai-use-stage": "production",
-    "tool-ecosystem": "python",
-    "tool-framework": "gradio",
-    "tool-deploy": "Hugging Face",
-    "filter": "ai",
-    "image": "screenshot/screen-slm.jpg"
+    "tool-ecosystem": "",
+    "tool-framework": "emulatorJS, go, rust, tauri",
+    "tool-deploy": "cloudflare",
+    "filter": "data_dynamic",
+    "image": "screenshot/screen-mini-games.jpg"
   }
 ]
