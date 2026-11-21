@@ -15,21 +15,6 @@
     "image": "screenshot/screen-google.jpg"
   },
   {
-    "repo": "mini-quant",
-    "url": "https://gitsam.com/mini-quant/",
-    "title": "Mini SFA for Quants",
-    "description": "Artifacts for Client-side Computing",
-    "target-audience": "",
-    "desired-impact": "",
-    "domain": "investment",
-    "ai-use-stage": "development",
-    "tool-ecosystem": "",
-    "tool-framework": "",
-    "tool-deploy": "github",
-    "filter": "data_static",
-    "image": "screenshot/screen-digitals.jpg"
-  },
-  {
     "repo": "hf-arena",
     "url": "https://primenumbersam-arena.hf.space",
     "title": "Long·Short Arena",
@@ -47,8 +32,8 @@
   {
     "repo": "mcp",
     "url": "https://primenumbersam.pages.dev",
-    "title": "Mini Quant Terminal",
-    "description": "무환각, 일관성, 저비용, 초고속, 초경량<br>Factor DB + Compute Server<br>Github: Local MCP App with Go on Docker",
+    "title": "Local Finance MCP Server",
+    "description": "무환각, 일관성, 저비용, 초고속, 초경량<br>Factor DB + Compute Server<br>Github: Mini Quant Terminal with Go on Docker",
     "target-audience": "",
     "desired-impact": "",
     "domain": "investment",
@@ -59,6 +44,21 @@
     "filter": "ai",
     "image": "screenshot/screen-mini-mcp.jpg"
   },
+  {
+    "repo": "lab-game",
+    "url": "https://lab-game.primenumbersam.workers.dev/",
+    "title": "Local Uncensored AI Server",
+    "description": "핵찐따 아재의 두뇌운동을 위한 게임<br>Web Games for Edu-tainment<br>Cloudflare: PWA (TypeScript + Go)",
+    "target-audience": "",
+    "desired-impact": "",
+    "domain": "technology",
+    "ai-use-stage": "development",
+    "tool-ecosystem": "",
+    "tool-framework": "emulatorJS, go, rust, tauri",
+    "tool-deploy": "cloudflare",
+    "filter": "data_dynamic",
+    "image": "screenshot/screen-mini-games.jpg"
+  },  
   {
     "repo": "mini-trading-diary",
     "url": "https://github.com/primenumbersam/mini-diary-trading",
@@ -405,18 +405,18 @@
     "image": "screenshot/screen-mini-design.jpg"
   },
   {
-    "repo": "lab-game",
-    "url": "https://lab-game.primenumbersam.workers.dev/",
-    "title": "Web Games for Edu-tainment",
-    "description": "핵찐따 아재의 두뇌운동을 위한 게임<br>Cloudflare: TypeScript PWA with Go",
+    "repo": "mini-quant",
+    "url": "https://gitsam.com/mini-quant/",
+    "title": "Mini SFA for Quants",
+    "description": "Artifacts for Client-side Computing",
     "target-audience": "",
     "desired-impact": "",
-    "domain": "technology",
+    "domain": "investment",
     "ai-use-stage": "development",
     "tool-ecosystem": "",
-    "tool-framework": "emulatorJS, go, rust, tauri",
-    "tool-deploy": "cloudflare",
-    "filter": "data_dynamic",
-    "image": "screenshot/screen-mini-games.jpg"
+    "tool-framework": "",
+    "tool-deploy": "github",
+    "filter": "data_static",
+    "image": "screenshot/screen-digitals.jpg"
   }
 ]
