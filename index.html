@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GITSAM LAB | Design Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bauhaus-red: #E63946;
+            --bauhaus-yellow: #FFB703;
+            --bauhaus-blue: #1D3557;
+            --bauhaus-black: #111111;
+            --bauhaus-white: #FFFFFF;
+            --border-thick: 4px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bauhaus-white);
+            color: var(--bauhaus-black);
+            margin: 0;
+            padding: 0;
+            line-height: 1.2;
+            overflow-x: hidden;
+        }
+
+        .grid-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.08;
+            background-image:
+                linear-gradient(var(--bauhaus-black) 1px, transparent 1px),
+                linear-gradient(90deg, var(--bauhaus-black) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        .bauhaus-border {
+            border: var(--border-thick) solid var(--bauhaus-black);
+        }
+
+        /* Slot Machine Layout Optimization */
+        .slot-machine-container {
+            background-color: #FFFFFF;
+            padding: 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            /* Mobile First */
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .slot-machine-container {
+                grid-template-columns: 1fr auto 1fr;
+                padding: 2.5rem;
+                gap: 3rem;
+            }
+        }
+
+        .reel-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+            background-color: var(--bauhaus-black);
+            padding: 0.5rem;
+            position: relative;
+        }
+
+        @media (min-width: 640px) {
+            .reel-grid {
+                gap: 1rem;
+                padding: 1rem;
+            }
+        }
+
+        .reel {
+            height: 180px;
+            overflow: hidden;
+            background-color: #EEE;
+            width: 60px;
+            position: relative;
+        }
+
+        @media (min-width: 640px) {
+            .reel {
+                height: 240px;
+                width: 80px;
+            }
+        }
+
+        .symbol {
+            height: 60px;
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            background-color: white;
+            border: 1px solid #ddd;
+        }
+
+        @media (min-width: 640px) {
+            .symbol {
+                height: 80px;
+                width: 80px;
+                font-size: 2.5rem;
+            }
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+
+        .spinning .symbol {
+            filter: blur(2px);
+        }
+
+        .winning-symbol {
+            background-color: var(--bauhaus-yellow) !important;
+            animation: win-pulse 0.5s infinite alternate;
+            z-index: 10;
+        }
+
+        @keyframes win-pulse {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.05);
+            }
+        }
+
+        .filter-btn {
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            font-size: 0.75rem;
+            background: white;
+            white-space: nowrap;
+        }
+
+        .filter-btn.active {
+            background-color: var(--bauhaus-red);
+            color: white;
+            border-color: var(--bauhaus-black);
+        }
+
+        /* Mobile Select Styling */
+        .mobile-select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' stroke-width='4'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.2rem;
+        }
+
+        .btn-bauhaus {
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.1s;
+        }
+
+        .btn-bauhaus:active {
+            transform: scale(0.95);
+        }
+
+        .toggle-active {
+            background-color: var(--bauhaus-blue) !important;
+            color: white !important;
+        }
+
+        .thumb-grid {
+            background-image: radial-gradient(var(--bauhaus-black) 1px, transparent 0);
+            background-size: 15px 15px;
+            opacity: 0.05;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .gemini-floating-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(155, 114, 203, 0.3);
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 9999;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .gemini-floating-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(155, 114, 203, 0.2);
+            border-color: rgba(155, 114, 203, 0.6);
+        }
+
+        .gemini-icon {
+            width: 28px;
+            height: 28px;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .gemini-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gemini-text .label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .gemini-text .title {
+            font-size: 14px;
+            color: #1f1f1f;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .gemini-text small {
+            font-weight: 400;
+            color: #4285F4;
+        }
+
+        /* 모바일 대응: 화면이 작을 때는 텍스트를 숨기고 아이콘만 보여줄 수도 있습니다. */
+        @media (max-width: 480px) {
+            .gemini-floating-button {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px;
+            }
+
+            .gemini-text {
+                display: none;
+                /* 텍스트 숨기기 (선택 사항) */
+            }
+
+            .gemini-icon {
+                margin-right: 0;
+            }
+        }
+
+        /* Theme Toggle Switch */
+        .theme-switch-track {
+            width: 44px;
+            height: 24px;
+            border: 3px solid var(--bauhaus-black);
+            background-color: #FFFFFF;
+            border-radius: 9999px;
+            padding: 2px;
+            display: flex;
+            align-items: center;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .theme-switch-knob {
+            width: 14px;
+            height: 14px;
+            border-radius: 9999px;
+            background-color: var(--bauhaus-black);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            transform: translateX(0);
+        }
+
+        #theme-label-light {
+            opacity: 1;
+            transition: opacity 0.2s ease, color 0.2s ease;
+        }
+
+        #theme-label-dark {
+            opacity: 0.4;
+            transition: opacity 0.2s ease, color 0.2s ease;
+        }
+
+        /* Dark Mode Theme Overrides */
+        html.dark {
+            color-scheme: dark;
+        }
+
+        html.dark body {
+            background-color: #111111;
+            color: #F5F5F5;
+        }
+
+        html.dark .grid-bg {
+            background-image:
+                linear-gradient(#ffffff 1px, transparent 1px),
+                linear-gradient(90deg, #ffffff 1px, transparent 1px);
+            opacity: 0.05;
+        }
+
+        html.dark .bauhaus-border {
+            border-color: #F5F5F5 !important;
+        }
+
+        html.dark header#hero,
+        html.dark .slot-machine-container,
+        html.dark .bauhaus-card {
+            background-color: #181818 !important;
+            color: #F5F5F5 !important;
+        }
+
+        html.dark .theme-switch-track {
+            border-color: #F5F5F5;
+            background-color: #181818;
+        }
+
+        html.dark .theme-switch-knob {
+            background-color: var(--bauhaus-yellow);
+            transform: translateX(20px);
+        }
+
+        html.dark #theme-label-light {
+            opacity: 0.4;
+        }
+
+        html.dark #theme-label-dark {
+            opacity: 1;
+            color: var(--bauhaus-yellow);
+        }
+
+        html.dark #bet-box {
+            background-color: #181818 !important;
+            color: #F5F5F5 !important;
+        }
+
+        html.dark #bet-box button {
+            background-color: #262626 !important;
+            color: #F5F5F5 !important;
+            border-color: #F5F5F5 !important;
+        }
+
+        html.dark #bet-box button:hover {
+            background-color: #333333 !important;
+        }
+
+        html.dark #turbo-btn,
+        html.dark #auto-btn {
+            background-color: #181818 !important;
+            color: #F5F5F5 !important;
+        }
+
+        html.dark #turbo-btn:hover,
+        html.dark #auto-btn:hover {
+            background-color: #2a2a2a !important;
+        }
+
+        html.dark #turbo-btn.toggle-active,
+        html.dark #auto-btn.toggle-active {
+            background-color: var(--bauhaus-blue) !important;
+            color: #FFFFFF !important;
+        }
+
+        html.dark .reel {
+            background-color: #262626;
+        }
+
+        html.dark .symbol {
+            background-color: #181818;
+            border-color: #333333;
+            color: #FFFFFF;
+        }
+
+        html.dark .filter-btn:not(.active) {
+            background-color: #181818 !important;
+            color: #F5F5F5 !important;
+        }
+
+        html.dark .filter-btn.active {
+            background-color: var(--bauhaus-red) !important;
+            color: #FFFFFF !important;
+        }
+
+        html.dark .mobile-select {
+            background-color: #181818 !important;
+            color: #F5F5F5 !important;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white' stroke-width='4'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E");
+        }
+
+        html.dark .aspect-square {
+            background-color: #111111 !important;
+        }
+
+        html.dark .aspect-square .bg-white {
+            background-color: #181818 !important;
+            color: #F5F5F5 !important;
+            border-color: #F5F5F5 !important;
+        }
+
+        html.dark .thumb-grid {
+            background-image: radial-gradient(#FFFFFF 1px, transparent 0);
+            opacity: 0.08;
+        }
+
+        html.dark .border-black {
+            border-color: #F5F5F5 !important;
+        }
+
+        html.dark footer {
+            border-color: #F5F5F5 !important;
+        }
+
+        html.dark footer p.bg-black {
+            background-color: #F5F5F5 !important;
+            color: #111111 !important;
+        }
+
+        html.dark .gemini-floating-button {
+            background: rgba(28, 28, 28, 0.85);
+            border-color: rgba(155, 114, 203, 0.5);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+        }
+
+        html.dark .gemini-text .title {
+            color: #F5F5F5;
+        }
+
+        html.dark .gemini-text .label {
+            color: #AAAAAA;
+        }
+    </style>
+</head>
+
+<body class="p-4 sm:p-8 md:p-12">
+    <div class="grid-bg"></div>
+
+    <!-- Hero Section: Slot Machine Optimized -->
+    <header id="hero" class="bauhaus-border mb-12 relative overflow-hidden bg-white max-w-[1400px] mx-auto">
+        <div class="absolute top-0 left-6 w-[2px] h-full bg-black opacity-5"></div>
+
+        <div class="slot-machine-container relative z-10">
+            <!-- Left: Stats & Info -->
+            <div class="flex flex-col gap-4">
+                <div class="order-1 lg:order-1">
+                    <div class="flex items-center justify-between mb-2">
+                        <p class="font-black text-[10px] sm:text-[11px] tracking-widest uppercase opacity-60 m-0">GITSAM
+                            LAB</p>
+                        <button id="theme-toggle" onclick="toggleTheme()"
+                            class="flex items-center gap-2 cursor-pointer bg-transparent border-0 p-0 focus:outline-none select-none"
+                            role="switch" aria-label="Toggle Dark/Light Mode">
+                            <span id="theme-label-light"
+                                class="text-[9px] font-black uppercase tracking-wider">LIGHT</span>
+                            <div class="theme-switch-track">
+                                <div class="theme-switch-knob"></div>
+                            </div>
+                            <span id="theme-label-dark"
+                                class="text-[9px] font-black uppercase tracking-wider">DARK</span>
+                        </button>
+                    </div>
+                    <h1 class="text-3xl sm:text-5xl lg:text-5xl font-black tracking-tighter uppercase leading-[1] mb-2">
+                        느<span style="color: var(--bauhaus-red);">좋</span> 창작 <span
+                            style="color: var(--bauhaus-yellow);">실험실</span>
+                    </h1>
+                    <h3>삼순동순 | 기술좋문 좋소기업</h3>
+                </div>
+
+                <div
+                    class="flex items-center justify-between bg-black text-white p-3 sm:p-4 bauhaus-border h-16 sm:h-20 order-2 lg:order-2">
+                    <div class="flex flex-col justify-center">
+                        <span class="text-[8px] sm:text-[9px] uppercase tracking-widest font-black opacity-60">Total
+                            Balance</span>
+                        <div id="balance" class="text-xl sm:text-2xl font-black tabular-nums leading-none mt-1">$5,000
+                        </div>
+                    </div>
+                </div>
+
+                <div id="bet-box"
+                    class="flex items-center justify-between bg-white text-black p-3 sm:p-4 bauhaus-border h-16 sm:h-20 order-3">
+                    <div class="flex flex-col justify-center">
+                        <span
+                            class="text-[8px] sm:text-[9px] uppercase tracking-widest font-black opacity-60">Bet</span>
+                        <div id="bet-display" class="text-xl sm:text-2xl font-black tabular-nums leading-none mt-1">$10
+                        </div>
+                    </div>
+                    <div class="flex gap-1 sm:gap-2">
+                        <button onclick="changeBet(-10)"
+                            class="w-8 h-8 sm:w-10 sm:h-10 bauhaus-border flex items-center justify-center btn-bauhaus hover:bg-[#eee]">-</button>
+                        <button onclick="changeBet(10)"
+                            class="w-8 h-8 sm:w-10 sm:h-10 bauhaus-border flex items-center justify-center btn-bauhaus hover:bg-[#eee]">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center: The Reels -->
+            <div class="relative flex flex-col items-center">
+                <div class="reel-grid bauhaus-border" id="slot-reels">
+                    <div class="reel bauhaus-border" id="reel-0"></div>
+                    <div class="reel bauhaus-border" id="reel-1"></div>
+                    <div class="reel bauhaus-border" id="reel-2"></div>
+                </div>
+                <div id="win-display"
+                    class="absolute -bottom-8 left-0 w-full text-center font-black text-sm sm:text-lg uppercase tracking-widest opacity-0 transition-opacity">
+                    WIN +$0
+                </div>
+            </div>
+
+            <!-- Right: Controls -->
+            <div class="flex flex-row lg:flex-col gap-4 items-center justify-center">
+                <button id="spin-btn" onclick="handleSpin()"
+                    class="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-full bauhaus-border bg-[var(--bauhaus-red)] text-white flex items-center justify-center btn-bauhaus text-xl sm:text-2xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-1 active:translate-y-1 transition-all">
+                    SPIN
+                </button>
+
+                <div class="flex flex-col gap-2 w-full max-w-[120px]">
+                    <button id="turbo-btn" onclick="toggleTurbo()"
+                        class="bauhaus-border py-2 text-[9px] font-black uppercase tracking-widest btn-bauhaus bg-white">Turbo</button>
+                    <button id="auto-btn" onclick="toggleAuto()"
+                        class="bauhaus-border py-2 text-[9px] font-black uppercase tracking-widest btn-bauhaus bg-white">Auto</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Filter -->
+    <nav class="max-w-[1400px] mx-auto mb-10">
+        <!-- Desktop: Buttons (Hidden on Mobile) -->
+        <div class="hidden md:flex gap-4" id="filter-container">
+            <button class="filter-btn active bauhaus-border px-8 py-3" data-category="all">All Spokes</button>
+            <button class="filter-btn bauhaus-border px-8 py-3" data-category="data_static">data_static</button>
+            <button class="filter-btn bauhaus-border px-8 py-3" data-category="data_dynamic">data_dynamic</button>
+            <button class="filter-btn bauhaus-border px-8 py-3" data-category="ai">AI</button>
+        </div>
+        <!-- Mobile: Dropdown (Hidden on Desktop) -->
+        <div class="block md:hidden">
+            <div class="relative">
+                <select id="mobile-filter"
+                    class="mobile-select w-full bauhaus-border px-4 py-4 font-black uppercase text-xs tracking-[0.2em] bg-white appearance-none cursor-pointer outline-none focus:border-[var(--bauhaus-red)]">
+                    <option value="all">Category: All Spokes</option>
+                    <option value="data_static">Category: data_static</option>
+                    <option value="data_dynamic">Category: data_dynamic</option>
+                    <option value="ai">Category: AI</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Grid: Optimized Breakpoints -->
+    <main class="max-w-[1400px] mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8" id="card-grid"></div>
+    </main>
+
+    <footer
+        class="mt-8 border-t-[4px] border-black pt-2 pb-2 text-[10px] font-black uppercase flex flex-col md:flex-row justify-center items-center gap-8 max-w-[1400px] mx-auto">
+
+        <p class="tracking-[0.2em] font-black bg-black text-white px-3 py-1 text-[10px]">Lightweight & Modern tech
+            stacks</p>
+        <a href="https://gitsam.com" target="_blank" rel="noopener noreferrer"
+            class="text-xl sm:text-2xl font-black tracking-tighter block hover:text-[var(--bauhaus-red)]">Gitsam</a>
+    </footer>
+
+    <script>
+        /* --- SOUND EFFECTS --- */
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        function playSound(freq, type, duration) {
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.type = type;
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+            gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start();
+            osc.stop(audioCtx.currentTime + duration);
+        }
+
+        /* --- GAME LOGIC --- */
+        const SYMBOLS = [
+            { id: 'jackpot', char: '💎', value: 100, weight: 2 },
+            { id: 'seven', char: '7️⃣', value: 50, weight: 5 },
+            { id: 'star', char: '⭐', value: 20, weight: 10 },
+            { id: 'bell', char: '🔔', value: 10, weight: 15 },
+            { id: 'cherry', char: '🍒', value: 5, weight: 25 },
+            { id: 'lemon', char: '🍋', value: 2, weight: 43 },
+        ];
+
+        let balance = 5000;
+        let bet = 10;
+        let isSpinning = false;
+        let turboMode = false;
+        let autoSpin = false;
+        let currentReels = [[], [], []];
+
+        const displayBalance = document.getElementById('balance');
+        const displayBet = document.getElementById('bet-display');
+        const displayWin = document.getElementById('win-display');
+        const spinBtn = document.getElementById('spin-btn');
+
+        function getRandomSymbol() {
+            const totalWeight = SYMBOLS.reduce((acc, s) => acc + s.weight, 0);
+            let random = Math.random() * totalWeight;
+            for (const s of SYMBOLS) {
+                if (random < s.weight) return s;
+                random -= s.weight;
+            }
+            return SYMBOLS[SYMBOLS.length - 1];
+        }
+
+        function initGame() {
+            for (let i = 0; i < 3; i++) {
+                currentReels[i] = [getRandomSymbol(), getRandomSymbol(), getRandomSymbol()];
+                renderReel(i);
+            }
+        }
+
+        function renderReel(reelIdx) {
+            const reelEl = document.getElementById(`reel-${reelIdx}`);
+            reelEl.innerHTML = currentReels[reelIdx].map(sym => `
+                <div class="symbol">${sym.char}</div>
+            `).join('');
+        }
+
+        function changeBet(val) {
+            if (isSpinning) return;
+            bet = Math.max(10, Math.min(balance, bet + val));
+            displayBet.innerText = `$${bet}`;
+            playSound(300, 'sine', 0.1);
+        }
+
+        async function handleSpin() {
+            if (isSpinning || balance < bet) {
+                if (autoSpin) toggleAuto();
+                return;
+            }
+
+            isSpinning = true;
+            balance -= bet;
+            updateUI();
+
+            displayWin.style.opacity = '0';
+            document.querySelectorAll('.symbol').forEach(s => s.classList.remove('winning-symbol'));
+            document.getElementById('slot-reels').classList.add('spinning');
+
+            const spinDuration = turboMode ? 300 : 1000;
+            const delays = turboMode ? [0, 40, 80] : [0, 200, 400];
+
+            const spinPromises = delays.map((delay, i) => {
+                return new Promise(resolve => {
+                    setTimeout(() => {
+                        const interval = setInterval(() => {
+                            currentReels[i] = [getRandomSymbol(), getRandomSymbol(), getRandomSymbol()];
+                            renderReel(i);
+                            playSound(120 + (i * 40), 'square', 0.04);
+                        }, 70);
+
+                        setTimeout(() => {
+                            clearInterval(interval);
+                            currentReels[i] = [getRandomSymbol(), getRandomSymbol(), getRandomSymbol()];
+                            renderReel(i);
+                            playSound(250, 'sine', 0.15);
+                            resolve();
+                        }, spinDuration);
+                    }, delay);
+                });
+            });
+
+            await Promise.all(spinPromises);
+            document.getElementById('slot-reels').classList.remove('spinning');
+            checkWins();
+        }
+
+        function checkWins() {
+            let winTotal = 0;
+            const winningIndices = [];
+
+            for (let r = 0; r < 3; r++) {
+                if (currentReels[0][r].id === currentReels[1][r].id && currentReels[1][r].id === currentReels[2][r].id) {
+                    winTotal += currentReels[0][r].value * bet;
+                    winningIndices.push({ reel: 0, row: r }, { reel: 1, row: r }, { reel: 2, row: r });
+                }
+            }
+            if (currentReels[0][0].id === currentReels[1][1].id && currentReels[1][1].id === currentReels[2][2].id) {
+                winTotal += currentReels[1][1].value * bet;
+                winningIndices.push({ reel: 0, row: 0 }, { reel: 1, row: 1 }, { reel: 2, row: 2 });
+            }
+            if (currentReels[0][2].id === currentReels[1][1].id && currentReels[1][1].id === currentReels[2][0].id) {
+                winTotal += currentReels[1][1].value * bet;
+                winningIndices.push({ reel: 0, row: 2 }, { reel: 1, row: 1 }, { reel: 2, row: 0 });
+            }
+
+            if (winTotal > 0) {
+                balance += winTotal;
+                displayWin.innerText = `WIN +$${winTotal.toLocaleString()}`;
+                displayWin.style.opacity = '1';
+                playSound(600, 'triangle', 0.4);
+
+                winningIndices.forEach(pos => {
+                    const reelEl = document.getElementById(`reel-${pos.reel}`);
+                    if (reelEl && reelEl.children[pos.row]) reelEl.children[pos.row].classList.add('winning-symbol');
+                });
+            }
+
+            isSpinning = false;
+            updateUI();
+
+            if (autoSpin && balance >= bet) {
+                setTimeout(handleSpin, 800);
+            }
+        }
+
+        function updateUI() {
+            displayBalance.innerText = `$${balance.toLocaleString()}`;
+            spinBtn.disabled = isSpinning || balance < bet;
+            spinBtn.style.opacity = (isSpinning || balance < bet) ? '0.4' : '1';
+        }
+
+        function toggleTurbo() {
+            turboMode = !turboMode;
+            document.getElementById('turbo-btn').classList.toggle('toggle-active');
+            playSound(400, 'sine', 0.1);
+        }
+
+        function toggleAuto() {
+            autoSpin = !autoSpin;
+            document.getElementById('auto-btn').classList.toggle('toggle-active');
+            playSound(400, 'sine', 0.1);
+            if (autoSpin && !isSpinning) handleSpin();
+        }
+
+        /* --- HUB DATA & RENDER --- */
+        let spokeData = [];
+
+        const FILTER_THEMES = {
+            ai: { type: 'circle', color: '#FFB703' },
+            data_dynamic: { type: 'triangle', color: '#1D3557' },
+            data_static: { type: 'square', color: '#E63946' }
+        };
+
+        async function fetchData() {
+            try {
+                const response = await fetch('spoke.json');
+                spokeData = await response.json();
+                renderCards();
+            } catch (error) {
+                console.error('Error loading spoke data:', error);
+            }
+        }
+
+        function renderCards(filter = 'all') {
+            const grid = document.getElementById('card-grid');
+            grid.innerHTML = '';
+            const filteredData = filter === 'all' ? spokeData : spokeData.filter(item => item.filter === filter);
+
+            filteredData.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = 'bauhaus-card bauhaus-border h-full flex flex-col bg-white group';
+
+                const theme = FILTER_THEMES[item.filter] || { type: 'square', color: '#111111' };
+                const shapeType = item.type || theme.type;
+                const shapeColor = item.color || theme.color;
+
+                let shapeHtml = '';
+                const shapeSize = 'w-7 h-7 sm:w-8 h-8';
+                if (shapeType === 'circle') shapeHtml = `<div class="${shapeSize} rounded-full circle bauhaus-border" style="background-color: ${shapeColor}"></div>`;
+                else if (shapeType === 'square') shapeHtml = `<div class="${shapeSize} square" style="background-color: ${shapeColor}"></div>`;
+                else shapeHtml = `<div class="w-0 h-0 border-l-[14px] border-l-transparent border-r-[14px] border-r-transparent border-b-[24px]" style="border-bottom-color: ${shapeColor}"></div>`;
+
+                card.innerHTML = `
+                    <div class="aspect-square w-full bauhaus-border border-t-0 border-l-0 border-r-0 bg-[#F5F5F5] relative overflow-hidden">
+                        ${item.image ? `<img src="${item.image}" class="absolute inset-0 w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" alt="${item.title}">` : ''}
+                        <div class="absolute inset-0 thumb-grid"></div>
+                        <div class="absolute top-4 left-4 font-black text-[8px] bg-white px-1 py-0.5 border border-black z-10 uppercase tracking-tighter">0${index + 1} // ${item.repo}</div>
+                    </div>
+                    <div class="p-6 sm:p-8 flex flex-col flex-grow">
+                        <h3 class="text-lg sm:text-[16px] font-black mb-3 leading-[1.1] tracking-tighter">${item.title}</h3>
+                        <p class="text-[11px] mb-8 flex-grow leading-relaxed font-medium opacity-60">${item.description}</p>
+                        <div class="mt-auto pt-6 border-t-[2px] border-black border-opacity-10 flex items-center justify-between">
+                            <a href="${item.url}" target="_blank" class="inline-flex items-center gap-2 group text-[10px] font-black uppercase tracking-widest hover:text-[var(--bauhaus-red)] transition-colors">
+                                > VIEW PROJECT 
+                            </a>
+                            <div class="flex-shrink-0">${shapeHtml}</div>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Event Listeners for Filters
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.dataset.category;
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Sync mobile dropdown
+                document.getElementById('mobile-filter').value = category;
+
+                renderCards(category);
+                playSound(300, 'sine', 0.05);
+            });
+        });
+
+        document.getElementById('mobile-filter').addEventListener('change', (e) => {
+            const category = e.target.value;
+
+            // Sync desktop buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.category === category);
+            });
+
+            renderCards(category);
+            playSound(300, 'sine', 0.05);
+        });
+
+        function toggleTheme() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            playSound(isDark ? 400 : 500, 'sine', 0.05);
+        }
+
+        window.onload = () => {
+            initGame();
+            fetchData();
+        };
+    </script>
+
+    <!-- "System Prompted LLM (ft. Gemini)" 플로팅 버튼 -->
+    <a href="https://runprompt.link/z7atk5f" class="gemini-floating-button" target="_blank" rel="noopener noreferrer">
+        <div class="gemini-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="url(#gemini-grad)" />
+                <defs>
+                    <linearGradient id="gemini-grad" x1="2" y1="12" x2="22" y2="12" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#4285F4" />
+                        <stop offset="50%" stop-color="#9B72CB" />
+                        <stop offset="100%" stop-color="#D96570" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        <div class="gemini-text">
+            <span class="title">느좋캐릭터 챗봇</span>
+            <span class="label">Prompted Bot<small>(LLMs)</small></span>
+        </div>
+    </a>
+</body>
+
+</html>
