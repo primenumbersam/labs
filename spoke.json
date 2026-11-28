@@ -48,7 +48,7 @@
     "repo": "bot",
     "url": "https://github.com/primenumbersam/bot",
     "title": "투기전략 구현 VM",
-    "description": "돈복사 자동매매 서버<br>CGP: Docker + Python + Bybit",
+    "description": "돈복사 자동매매 서버. c.f. Freqtrade<br>CGP: Docker + Python + Bybit",
     "target-audience": "",
     "desired-impact": "",
     "domain": "investment",
